@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 const TestimonialsSlider = () => {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const testimonials = [
     {
