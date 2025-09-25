@@ -10,6 +10,7 @@ import CrewTBB from '../tbbcrew/page';
 import CEO from '../CEO/page';
 import RoadMap from '../tbbroadmap/page';
 import TbbCode from '../tbbcode/page';
+import TestimonialsSlider from '../testimonials/page';
 
 
 const HomeTbb = () => {
@@ -104,8 +105,9 @@ const HomeTbb = () => {
             </div>
             <TbbCode />
             <CrewTBB />
-            <CEO /> 
+            <CEO />
             <RoadMap />
+            <TestimonialsSlider />
         </>
     )
 }
