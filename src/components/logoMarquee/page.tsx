@@ -1,5 +1,6 @@
+// "use client"
+
 // import React from 'react';
-// import Image from 'next/image';
 
 // const logos = [
 //   { name: 'Panasonic', src: '/panasonic.png', alt: 'Panasonic' },
@@ -15,51 +16,45 @@
 //   { name: 'PizzaDelight', src: '/pizzadelight.png', alt: 'pizzadelight' },
 // ];
 
-// const LogoMarquee: React.FC = () => {
+// const LogoMarquee = () => {
 //   return (
-//     <div className="w-full overflow-hidden bg-gray-400 py-8">
-//       <div className="flex animate-marquee hover:animate-marquee-pause">
+//     <div className="w-full overflow-hidden bg-gray-100 py-4 relative z-20">
+//       <div className="flex animate-marquee">
 //         {/* First set */}
-//         <div className="flex items-center min-w-full">
+//         <div className="flex items-center gap-12 pr-12">
 //           {logos.map((logo, index) => (
 //             <div 
 //               key={`first-${index}`}
-//               className="flex items-center justify-center min-w-[200px] h-20 flex-shrink-0"
+//               className="flex items-center justify-center w-32 h-20 flex-shrink-0"
 //             >
-//               <Image
+//               <img
 //                 src={logo.src} 
 //                 alt={logo.alt}
-//                 width={120}
-//                 height={60}
-//                 className="  w-auto h-auto object-contain 
+//                 className="max-w-full max-h-full w-auto h-auto object-contain 
 //                           grayscale opacity-70 transition-all duration-300 
 //                           hover:grayscale-0 hover:opacity-100 hover:scale-105"
-//                 priority={index < 3}
 //               />
 //             </div>
 //           ))}
 //         </div>
         
 //         {/* Duplicate set for seamless loop */}
-//         <div className="flex items-center min-w-full">
+//         <div className="flex items-center gap-12 pr-12">
 //           {logos.map((logo, index) => (
 //             <div 
 //               key={`second-${index}`}
-//               className="flex items-center justify-center  min-w-[160px] h-20 flex-shrink-0"
+//               className="flex items-center justify-center w-32 h-20 flex-shrink-0"
 //             >
-//               <Image
+//               <img
 //                 src={logo.src}
 //                 alt={logo.alt}
-//                 width={120}
-//                 height={60}
-//                 className="w-auto h-auto object-contain 
+//                 className="max-w-full max-h-full w-auto h-auto object-contain 
 //                           grayscale opacity-70 transition-all duration-300 
 //                           hover:grayscale-0 hover:opacity-100 hover:scale-105"
 //               />
 //             </div>
 //           ))}
 //         </div>
-        
 //       </div>
 //     </div>
 //   );
@@ -89,12 +84,14 @@ const LogoMarquee = () => {
   return (
     <div className="w-full overflow-hidden bg-gray-100 py-4 relative z-20">
       <div className="flex animate-marquee">
+        
         {/* First set */}
-        <div className="flex items-center gap-12 pr-12">
+        <div className="flex items-center gap-6 sm:gap-8 md:gap-12 pr-6 sm:pr-8 md:pr-12">
           {logos.map((logo, index) => (
             <div 
               key={`first-${index}`}
-              className="flex items-center justify-center w-32 h-20 flex-shrink-0"
+              className="flex items-center justify-center w-20 sm:w-24 md:w-28 lg:w-32 
+                         h-14 sm:h-16 md:h-18 lg:h-20 flex-shrink-0"
             >
               <img
                 src={logo.src} 
@@ -108,11 +105,12 @@ const LogoMarquee = () => {
         </div>
         
         {/* Duplicate set for seamless loop */}
-        <div className="flex items-center gap-12 pr-12">
+        <div className="flex items-center gap-6 sm:gap-8 md:gap-12 pr-6 sm:pr-8 md:pr-12">
           {logos.map((logo, index) => (
             <div 
               key={`second-${index}`}
-              className="flex items-center justify-center w-32 h-20 flex-shrink-0"
+              className="flex items-center justify-center w-20 sm:w-24 md:w-28 lg:w-32 
+                         h-14 sm:h-16 md:h-18 lg:h-20 flex-shrink-0"
             >
               <img
                 src={logo.src}

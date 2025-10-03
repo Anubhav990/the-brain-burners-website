@@ -2,13 +2,23 @@
 
 /* Custom animations for marquee */
 @keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee-pause {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* Custom animation utilities */
@@ -37,4 +47,67 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-satoshi), system-ui, sans-serif;
- } 
+}
+
+.circle {
+  @apply absolute w-[150px] h-[150px] sm:w-[240px] sm:h-[240px] rounded-full overflow-hidden cursor-pointer transition-all duration-300;
+}
+
+/* Left circle */
+.circle-left {
+  top: 80px;
+  left: -10px;
+}
+
+/* Top right circle */
+.circle-top-right {
+  top: -20px;
+  right: 30px;
+}
+
+/* Bottom circle */
+.circle-bottom {
+  bottom: -20px;
+  left: 250px;
+}
+
+@media screen and (max-width: 1280px) {
+  .circle-left {
+    top: 220px;
+    left: -30px;
+  }
+
+  .circle-bottom {
+    bottom: -70px;
+    left: 250px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .circle-left {
+    top: 50px;
+    left: 120px;
+  }
+
+  .circle-top-right {
+    top: 50px;
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .circle-left {
+    top: 30px;
+    left: -0px;
+  }
+
+  .circle-top-right {
+    top: 50px;
+    right: 20px;
+  }
+
+  .circle-bottom {
+    bottom: -30px;
+    left: 60px;
+  }
+}

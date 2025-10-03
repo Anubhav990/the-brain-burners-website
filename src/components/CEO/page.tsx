@@ -3,7 +3,7 @@ import React from 'react'
 
 const CEO = () => {
     return (
-        <div className=' bg-[url(/ceocompbanner.png)] max-w-[1300px] mx-auto bg-contain bg-center bg-no-repeat relative z-20 py-10  '>
+        <div className=' bg-[url(/ceocompbanner.png)] max-w-[1300px] mx-auto bg-contain bg-center bg-no-repeat relative z-20 py-10 hidden sm:block'>
             <div className='flex max-w-[1300px] mx-auto'>
                 <div className='w-[60%] py-15 pl-10'>
                     <div className='space-y-3'>

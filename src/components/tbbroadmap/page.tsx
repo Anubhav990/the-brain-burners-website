@@ -79,7 +79,7 @@ const steps: Step[] = [
 
 export default function RoadMap() {
   return (
-    <section className="relative w-full bg-white py-20">
+    <section className="relative w-full bg-white py-20 hidden sm:block">
       {/* === Background Image Layer 2 (deepest) === */}
       <div className="absolute w-auto h-[2300px] inset-0 z-0">
         <Image

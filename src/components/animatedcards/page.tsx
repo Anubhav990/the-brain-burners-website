@@ -6,8 +6,8 @@ const AnimatedCards = () => {
             id: 1,
             title: ["UI/UX", "Designing"],
             description: "We craft intuitive & visually engaging interfaces that put user experience at the center. Our design process focuses on understanding user behavior, creating seamless & aesthetically pleasing layouts that align with your brand identity.",
-            staticIcon: "/svgs/uiuxdesign.svg",
-            animatedIcon: "/gifs/uiux.gif",
+            staticIcon: "/testing.jpg",
+            animatedIcon: "/testing.gif",
             color: "bg-gray-100"
         },
         {
@@ -71,86 +71,84 @@ const AnimatedCards = () => {
     const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
     return (
-        <div className="w-full mt-[40px] relative z-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {services.map((service) => (
-                    <div
-                        key={service.id}
-                        className={`${service.color} rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer group hover:shadow-xl h-[500px]`} style={{ backgroundColor: hoveredCard === service.id ? "#ee8001" : "#f3f4f6" }}
-                        onMouseEnter={() => setHoveredCard(service.id)}
-                        onMouseLeave={() => setHoveredCard(null)}
-                    >
-                        {/* Icon Section */}
-                        <div className="relative mb-4">
+        <>
+            <div className="w-full mt-[40px] relative z-20 hidden sm:block">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {services.map((service) => (
+                        <div
+                            key={service.id}
+                            className={`${service.color} rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer group hover:shadow-xl h-[500px]`} style={{ backgroundColor: hoveredCard === service.id ? "#ee8001" : "#f3f4f6" }}
+                            onMouseEnter={() => setHoveredCard(service.id)}
+                            onMouseLeave={() => setHoveredCard(null)}
+                        >
+                            {/* Icon Section */}
+                            <div className="relative mb-4">
 
-                            <img src={service.staticIcon}
-                                alt={`${service.title} static`}
-                                className={`w-[55px] h-[55px] object-contain transition-all duration-300 ${hoveredCard === service.id ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}
-                            />
+                                <img src={service.staticIcon}
+                                    alt={`${service.title} static`}
+                                    className={`w-[55px] h-[55px] object-contain transition-all duration-300 ${hoveredCard === service.id ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}
+                                />
+                                {/* GIF on Hover */}
+                                <img
+                                    src={service.animatedIcon}
+                                    alt={`${service.title} animation`}
+                                    className={`w-[50px] object-contain absolute top-0 left-0 transition-all duration-300 ${hoveredCard === service.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
+                                />
+                            </div>
 
-                            {/* <div className={`text-4xl absolute top-0 left-0 transition-all duration-300 ${hoveredCard === service.id ? 'opacity-100 scale-100 animate-bounce' : 'opacity-0 scale-0'}`}>
-                                {service.animatedIcon}
-                            </div> */}
-                            {/* GIF on Hover */}
-                            <img
-                                src={service.animatedIcon}
-                                alt={`${service.title} animation`}
-                                className={`w-[50px] object-contain absolute top-0 left-0 transition-all duration-300 ${hoveredCard === service.id ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
-                            />
-                        </div>
+                            {/* Content */}
+                            <div className="flex-grow">
+                                <h3
+                                    className={`text-[22px] mt-2 font-bold text-gray-900 mb-3 ${hoveredCard === service.id ? "text-white" : "text-black"
+                                        }`}
+                                >
+                                    {Array.isArray(service.title)
+                                        ? service.title.map((word, i) => (
+                                            <React.Fragment key={i}>
+                                                {word}
+                                                <br />
+                                            </React.Fragment>
+                                        ))
+                                        : service.title}
+                                </h3>
+                                <p className={`text-gray-700 text-[17px] leading-relaxed ${hoveredCard === service.id ? 'text-white' : 'text-black'}`}>
+                                    {service.description}
+                                </p>
+                            </div>
 
-                        {/* Content */}
-                        <div className="flex-grow">
-                            <h3
-                                className={`text-[22px] mt-2 font-bold text-gray-900 mb-3 ${hoveredCard === service.id ? "text-white" : "text-black"
-                                    }`}
-                            >
-                                {Array.isArray(service.title)
-                                    ? service.title.map((word, i) => (
-                                        <React.Fragment key={i}>
-                                            {word}
-                                            <br />
-                                        </React.Fragment>
-                                    ))
-                                    : service.title}
-                            </h3>
-                            <p className={`text-gray-700 text-[17px] leading-relaxed ${hoveredCard === service.id ? 'text-white' : 'text-black'}`}>
-                                {service.description}
-                            </p>
-                        </div>
-
-                        {/* Button */}
-                        <div className="mt-6 relative">
-                            <button
-                                className={`
+                            {/* Button */}
+                            <div className="mt-6 relative">
+                                <button
+                                    className={`
                   bg-orange-500 text-white font-semibold rounded-full flex items-center justify-center
                   transition-all duration-500 ease-out relative shadow-[0px_3px_0_#000000] overflow-hidden
                   ${hoveredCard === service.id ? 'w-[90%] py-3 px-6 shadow-[2px_3px_0_#000000]' : 'w-12 h-12'}
                 `}
-                            >
-                                <span
-                                    className={`
+                                >
+                                    <span
+                                        className={`
                     transition-all duration-300 text-[20px] whitespace-nowrap
                     ${hoveredCard === service.id ? 'opacity-100 mr-2' : 'opacity-0 absolute'}
                   `}
-                                >
-                                    Know More
-                                </span>
-                                <svg
-                                    className={`w-[23px] h-[23px] transition-transform duration-300 ${hoveredCard === service.id ? 'translate-x-1' : ''}`}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={2}
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H8M17 7V16" />
-                                </svg>
-                            </button>
+                                    >
+                                        Know More
+                                    </span>
+                                    <svg
+                                        className={`w-[23px] h-[23px] transition-transform duration-300 ${hoveredCard === service.id ? 'translate-x-1' : ''}`}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={2}
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H8M17 7V16" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

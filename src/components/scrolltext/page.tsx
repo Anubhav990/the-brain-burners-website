@@ -28,7 +28,7 @@ export default function Page9() {
       {/* Paragraph container */}
       <div className="relative overflow-hidden text-xl md:text-4xl font-medium leading-[50px]">
         {/* Base text (gray) */}
-        <div className="text-[54px] text-[#F38400] space-y-3 leading-[63px]">
+        <div className="text-[25px] md:text-[54px] text-[#F38400] space-y-3 leading-[30px] md:leading-[63px]">
           <p>
             At Brain Burners, We Transform Bold Ideas Into Powerful Digital
             Experiences.
@@ -44,7 +44,7 @@ export default function Page9() {
 
         {/* Overlay (orange fill draining as you scroll down) */}
         <motion.div
-          className="text-[54px] font-medium absolute top-0 left-0 w-full text-[#8D8986] space-y-3 leading-[63px]"
+          className="text-[25px] md:text-[54px] font-medium absolute top-0 left-0 w-full text-[#8D8986] space-y-3 leading-[30px] md:leading-[63px]"
           style={{ clipPath }}
         >
           <p>
