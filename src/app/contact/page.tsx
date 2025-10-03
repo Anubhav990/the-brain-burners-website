@@ -7,7 +7,28 @@ import React, { useState } from "react";
 import { supabase } from "@/lib/SupabaseClient";
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
+
+    type FormFields = {
+        fullName: string;
+        email: string;
+        phone: string;
+        timeline: string;
+        budget: string;
+        projectDetails: string;
+        hearAbout: string;
+    };
+
+    type Errors = {
+        [K in keyof FormFields]?: string;
+    };
+
+    type Touched = {
+        [K in keyof FormFields]?: boolean;
+    };
+
+    type SubmitStatus = 'success' | 'error' | null;
+
+    const [formData, setFormData] = useState<FormFields>({
         fullName: "",
         email: "",
         phone: "",
@@ -17,12 +38,14 @@ export default function ContactForm() {
         hearAbout: ""
     });
 
-    const [errors, setErrors] = useState({});
-    const [touched, setTouched] = useState({});
+    const [errors, setErrors] = useState<Errors>({});
+    const [touched, setTouched] = useState<Touched>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
+    const [submitStatus, setSubmitStatus] = useState<SubmitStatus>(null);
 
-    const validateField = (name, value) => {
+    type FieldName = "fullName" | "email" | "phone" | "timeline" | "budget" | "projectDetails" | "hearAbout";
+
+    const validateField = (name: FieldName, value: string): string => {
         switch (name) {
             case "fullName":
                 if (!value.trim()) return "Full name is required";
@@ -53,26 +76,28 @@ export default function ContactForm() {
         }
     };
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
 
-        if (touched[name]) {
-            setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+        if (touched[name as keyof FormFields]) {
+            setErrors(prev => ({ ...prev, [name]: validateField(name as FieldName, value) }));
         }
     };
 
-    const handleBlur = (e) => {
+    const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
-        setTouched(prev => ({ ...prev, [name]: true }));
-        setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+        const fieldName = name as FieldName; // cast here
+        setTouched(prev => ({ ...prev, [fieldName]: true }));
+        setErrors(prev => ({ ...prev, [fieldName]: validateField(fieldName, value) }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const newErrors = {};
-        Object.keys(formData).forEach(key => {
+        const newErrors: Partial<Errors> = {};
+
+        (Object.keys(formData) as FieldName[]).forEach(key => {
             if (key !== "projectDetails" && key !== "hearAbout") {
                 const error = validateField(key, formData[key]);
                 if (error) newErrors[key] = error;

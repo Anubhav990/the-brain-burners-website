@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 const TestimonialsSlider = () => {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const testimonials = [
     {
@@ -163,7 +163,7 @@ const TestimonialsSlider = () => {
         <div className="w-full lg:w-1/2 relative">
           <div className="overflow-hidden">
             <div ref={scrollRef} className="flex gap-6">
-              {duplicatedTestimonials.map((testimonial, index) => (
+              {duplicatedTestimonials.map((testimonial, index) => ( 
                 <div
                   key={`${testimonial.id}-${index}`}
                   className="w-80 h-[400px] flex-shrink-0"

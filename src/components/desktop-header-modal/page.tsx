@@ -1,7 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-export default function HeaderModal({ onClose }) {
+type HeaderModalProps = {
+  onClose: () => void;
+};
+
+export default function HeaderModal({ onClose }: HeaderModalProps) {
   return (
     <div className="fixed inset-0 bg-black z-50 overflow-hidden">
       {/* Vertical Text */}
@@ -13,8 +17,8 @@ export default function HeaderModal({ onClose }) {
 
       {/* Close Button */}
       <button
-      onClick={onClose}
-      className="fixed top-8 right-8 text-orange-500 hover:text-orange-400 transition-colors">
+        onClick={onClose}
+        className="fixed top-8 right-8 text-orange-500 hover:text-orange-400 transition-colors">
         <svg
           width="40"
           height="40"
