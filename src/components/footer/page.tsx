@@ -1,37 +1,37 @@
 import React from "react";
-import Image from "next/image";
 
 export default function Footer() {
     return (
-        <div className="max-w-[1300px] mx-auto flex flex-col gap-[4px]">
+        <div className="max-w-[1300px] mx-auto flex flex-col gap-[4px] px-4 md:px-0">
             {/* Banner Section */}
-            <div className="w-full bg-black p-[55px] rounded-[30px] relative z-20 bg-[url('/footer/astronautbreaking.svg')] bg-contain bg-no-repeat bg-right">
+            <div className="w-full bg-black p-6 md:p-[55px] rounded-[30px] relative z-20 bg-[url('/footer/astronautbreaking.svg')] bg-contain bg-no-repeat bg-right">
                 <div className="max-w-4xl text-center md:text-left">
-                    <h2 className="text-white text-[40px] capitalize font-medium leading-[1.4]">
-                        From <span className="font-bold capitalize">launchpad to landing</span>, we’re with <br />
+                    <h2 className="text-white text-2xl md:text-[40px] capitalize font-medium leading-[1.4]">
+                        From <span className="font-bold capitalize">launchpad to landing</span>, we're with{" "}
+                        <span className="hidden md:inline"><br /></span>
                         you every step of the mission.
-                        <br />
-                        Let’s build digital universes that shine <br />
+                        <span className="hidden md:inline"><br /></span>
+                        Let's build digital universes that shine{" "}
+                        <span className="hidden md:inline"><br /></span>
                         <span className="font-bold capitalize">brighter than the stars.</span>
                     </h2>
 
-                    <div className="flex justify-start items-center mt-6">
-                        <Image
+                    <div className="flex justify-center md:justify-start items-center mt-6">
+                        <img
                             src="/footer/tbbdarklogo.svg"
                             alt="The Brain Burners"
-                            width={140}
-                            height={40}
-                            priority
+                            className="w-[100px] md:w-[140px] h-auto"
                         />
                     </div>
                 </div>
             </div>
 
             {/* Footer Section */}
-            <footer className="w-full px-2 py-8 bg-white relative z-20">
-                <div className="border-2 border-black rounded-[50px] px-12 py-10">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr_1.2fr] gap-8">
-
+            <footer className="w-full px-2 py-4 md:py-8 bg-white relative z-20">
+                <div className="border-2 border-black rounded-[30px] md:rounded-[50px] px-6 md:px-12 py-6 md:py-10">
+                    
+                    {/* Desktop Layout */}
+                    <div className="hidden md:grid grid-cols-[1fr_2fr_1fr_1.2fr] gap-8">
                         {/* About Section */}
                         <div>
                             <h3 className="font-bold text-lg mb-4 text-black">About</h3>
@@ -76,12 +76,10 @@ export default function Footer() {
                             <div className="grid grid-cols-3 gap-3">
                                 {["facebook", "linkedin", "instagram", "youtube", "x", "be"].map((icon) => (
                                     <a key={icon} href="#">
-                                        <Image
+                                        <img
                                             src={`/footer/${icon}.svg`}
                                             className="w-[40px]"
                                             alt={icon}
-                                            width={40}
-                                            height={40}
                                         />
                                     </a>
                                 ))}
@@ -92,12 +90,10 @@ export default function Footer() {
                         <div>
                             <div className="mb-4">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <Image
+                                    <img
                                         src="/svgs/brainburnerslogo.svg"
                                         className="w-[130px]"
                                         alt="Brain Burners Logo"
-                                        width={130}
-                                        height={50}
                                     />
                                 </div>
                             </div>
@@ -121,8 +117,88 @@ export default function Footer() {
                                 </p>
                             </div>
                         </div>
-
                     </div>
+
+                    {/* Mobile Layout */}
+                    <div className="md:hidden flex flex-col">
+                        {/* About Section - Mobile */}
+                        <div className="mb-6">
+                            <h3 className="font-semibold text-sm mb-3 text-black">About</h3>
+                            <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                                <a href="#" className="text-gray-700 hover:text-black transition">Home</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Work</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Our Team</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Contact Us</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Services</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">About Us</a>
+                            </div>
+                        </div>
+
+                        <div className="border-t border-black my-6"></div>
+
+                        {/* Services Section - Mobile */}
+                        <div className="mb-6">
+                            <h3 className="font-semibold text-sm mb-3 text-black">Services</h3>
+                            <div className="flex flex-col gap-2 text-sm">
+                                <a href="#" className="text-gray-700 hover:text-black transition">Social Media Management</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">SEO</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Artificial Intelligence Modernization</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Branding</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">UI/UX Designing</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Application Development</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Web Development</a>
+                                <a href="#" className="text-gray-700 hover:text-black transition">Performance Marketing</a>
+                            </div>
+                        </div>
+
+                        <div className="border-t border-black my-6"></div>
+
+                        {/* Socials Section - Mobile */}
+                        <div className="mb-6">
+                            <h3 className="font-semibold text-sm mb-3 text-black">Socials</h3>
+                            <div className="flex gap-2 flex-wrap">
+                                {["facebook", "linkedin", "instagram", "youtube", "x", "be"].map((icon) => (
+                                    <a key={icon} href="#" className="w-9 h-9 rounded-lg flex items-center justify-center">
+                                        <img
+                                            src={`/footer/${icon}.svg`}
+                                            className="w-9 h-9"
+                                            alt={icon}
+                                        />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="border-t border-black my-6"></div>
+
+                        {/* Logo and Contact Section - Mobile */}
+                        <div>
+                            <div className="mb-4 flex items-center gap-2">
+                                <img
+                                    src="/svgs/brainburnerslogo.svg"
+                                    className="w-[100px]"
+                                    alt="Brain Burners Logo"
+                                />
+                            </div>
+                            <div className="text-xs text-gray-700 space-y-1">
+                                <p className="text-black leading-relaxed">
+                                    Miran Square, D 180, Basement, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab - 160055
+                                </p>
+                                <p className="mt-3 text-black">
+                                    Int:{" "}
+                                    <a href="tel:+918194900054" className="hover:text-black transition">
+                                        +91 8194900054
+                                    </a>
+                                </p>
+                                <p className="text-black break-all">
+                                    <a href="mailto:robin@thebrainburners.io" className="hover:text-black transition">
+                                        robin@thebrainburners.io
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </footer>
         </div>

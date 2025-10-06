@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function FounderHeroMobile() {
   return (
-    <div className="flex items-center justify-center p-5">
+    <div className="flex items-center justify-center p-5 sm:hidden">
       <div className="max-w-[500px] bg-black w-full rounded-[30px] overflow-hidden shadow-2xl">
         {/* Image Section */}
         <div className="relative w-full px-6 pt-8">
