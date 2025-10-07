@@ -17,6 +17,8 @@ import HeaderModal from '../desktop-header-modal/page';
 import MobileSlider from '../mobile-animated-cards/page';
 import MobileCreationSlider from '../mobile-our-creations-slider/page';
 import FounderHeroMobile from '../mobile-CEO/page';
+import FAQS from '../FAQ/page';
+import RoadMapMobile from '../tbbroadmapmobile/page';
 
 
 const HomeTbb = () => {
@@ -111,6 +113,7 @@ const HomeTbb = () => {
                 <ScrollText />
             </div>
             <RoadMap />
+            <RoadMapMobile />
             <CreationSlider />
             <MobileCreationSlider />
             <TestimonialsSlider />
@@ -118,6 +121,7 @@ const HomeTbb = () => {
             <CrewTBB />
             <CEO />
             <FounderHeroMobile />
+            <FAQS />
             <Footer />
             {/* <HeaderModal /> */}
         </>

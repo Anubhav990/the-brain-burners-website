@@ -1,27 +1,72 @@
-import React from 'react';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type HeaderModalProps = {
   onClose: () => void;
 };
 
 export default function HeaderModal({ onClose }: HeaderModalProps) {
+
+  const router = useRouter();
+
+  // ✅ Generate random dot positions only once (prevents shifting)
+  const dots = React.useMemo(
+    () =>
+      Array.from({ length: 20 }).map((_, i) => ({
+        id: i,
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        duration: `${10 + Math.random() * 10}s`,
+        delay: `${Math.random() * 5}s`,
+        opacity: 0.4 + Math.random() * 0.6,
+        size: 2 + Math.random() * 3, // random size for depth
+      })),
+    []
+  );
+
   return (
-    <div className="fixed inset-0 bg-black z-50 overflow-hidden">
-      {/* Vertical Text */}
-      <div className="fixed left-8 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
-        <h2 className="text-gray-600 text-4xl font-bold tracking-wider whitespace-nowrap">
+    <div className="fixed inset-0 bg-black z-50 overflow-y-auto overflow-hidden text-white font-sans">
+      {/* ===== Animated Background Dots ===== */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {dots.map((dot) => (
+          <span
+            key={dot.id}
+            className="absolute rounded-full animate-float shadow-[0_0_8px_2px_rgba(243,132,0,0.6)]"
+            style={{
+              top: dot.top,
+              left: dot.left,
+              width: `${dot.size}px`,
+              height: `${dot.size}px`,
+              backgroundColor: "#ffffffff",
+              animationDuration: dot.duration,
+              animationDelay: dot.delay,
+              opacity: dot.opacity,
+              // ✅ Random movement distance for each dot
+              ["--tx" as any]: `${40 + Math.random() * 100}px`,
+              ["--ty" as any]: `${40 + Math.random() * 100}px`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* ===== Vertical Text ===== */}
+      <div className="fixed left-10 sm:left-[-340px] top-30 sm:top-1/2 -translate-y-1/2 sm:-rotate-90 origin-center">
+        <h2 className="text-transparent bg-clip-text bg-[linear-gradient(270deg,rgba(18,18,18,0.4)_0%,rgba(255,255,255,0.4)_50%,rgba(18,18,18,0.4)_100%)] text-2xl sm:text-[80px] font-extrabold tracking-wider whitespace-nowrap leading-none">
           THE BRAIN BURNERS
         </h2>
       </div>
 
-      {/* Close Button */}
+      {/* ===== Close Button ===== */}
       <button
         onClick={onClose}
-        className="fixed top-8 right-8 text-orange-500 hover:text-orange-400 transition-colors">
+        className="fixed cursor-pointer top-8 right-8 text-[#F38400] hover:scale-110 transition-transform duration-200 z-[60]"
+      >
         <svg
-          width="40"
-          height="40"
+          width="60"
+          height="60"
           viewBox="0 0 40 40"
           fill="none"
           stroke="currentColor"
@@ -32,81 +77,146 @@ export default function HeaderModal({ onClose }: HeaderModalProps) {
         </svg>
       </button>
 
-      {/* Main Content Container */}
-      <div className="h-full flex items-center justify-between px-32">
-        {/* Left Section - Contact Info */}
-        <div className="flex flex-col gap-12">
-          <div>
-            <h1 className="text-white text-6xl font-bold mb-6">HAVE QUESTIONS?</h1>
-            <p className="text-white text-xl">
-              Email us to:{' '}
-              <a
-                href="mailto:info@thebrainburners.io"
-                className="underline hover:text-orange-500 transition-colors"
-              >
-                info@thebrainburners.io
-              </a>
-            </p>
+      {/* ===== Main Layout ===== */}
+      <div className="mt-20 sm:mt-0 h-auto sm:h-full gap-10 flex flex-col justify-between relative z-10">
+        <div className="flex flex-col sm:flex-row justify-between items-start mt-25 sm:mt-50 md:mt-25 px-6 sm:px-15 lg:px-24">
+          {/* ==== Left Section ==== */}
+          <div className="flex flex-col sm:items-start items-center justify-between gap-10 sm:gap-40 mx-auto sm:ml-20 lg:ml-30">
+            <div>
+              <h1 className="whitespace-normal text-center sm:text-left sm:whitespace-nowrap text-3xl sm:text-6xl font-extrabold mb-6 leading-snug">
+                HAVE QUESTIONS?
+              </h1>
+              <p className="text-sm sm:text-2xl text-center sm:text-left font-light">
+                Email us to:{" "}
+                <a href="mailto:info@thebrainburners.io" className="underline">
+                  info@thebrainburners.io
+                </a>
+              </p>
+            </div>
+
+            <button
+              onClick={() => router.push('/contact')}
+              className="bg-[#F38400] text-white font-semibold px-12 py-3 rounded-full text-sm sm:text-lg shadow-[3px_4px_0px_0px_#FFFFFFCC] hover:shadow-[4px_5px_0px_0px_#FFFFFF99] transition-shadow duration-200 w-fit">
+              Book A Call
+            </button>
           </div>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-colors w-fit">
-            Book A Call
-          </button>
-        </div>
-
-        {/* Right Section - Navigation */}
-        <nav className="flex flex-col gap-6 text-right">
-          <a href="#home" className="text-white text-2xl hover:text-orange-500 transition-colors">
-            Home
-          </a>
-          <a href="#about" className="text-white text-2xl hover:text-orange-500 transition-colors border-b border-white pb-2">
-            About us
-          </a>
-          <a href="#team" className="text-white text-2xl hover:text-orange-500 transition-colors">
-            Our Team
-          </a>
-          <a href="#services" className="text-white text-2xl hover:text-orange-500 transition-colors border-b border-white pb-2">
-            Services
-          </a>
-          <a href="#work" className="text-white text-2xl hover:text-orange-500 transition-colors border-b border-white pb-2">
-            Our Work
-          </a>
-          <a href="#contact" className="text-white text-2xl hover:text-orange-500 transition-colors border-b border-white pb-2">
-            Contact Us
-          </a>
-        </nav>
-      </div>
-
-      {/* Footer Section */}
-      <div className="absolute bottom-0 left-0 right-0 border-t border-gray-800">
-        <div className="flex items-center justify-between px-32 py-8">
-          {/* Logo */}
-          <div className="relative w-48 h-16">
+          {/* ==== Astronaut Image ==== */}
+          <div
+            className="relative w-[300px] h-[200px] sm:h-[300px] mr-0 lg:mr-12 ml-10 sm:ml-[-350px] lg:ml-0  mt-[50px] sm:mt-[180px] lg:mt-[120px]"
+            style={{ animation: "floating 3s ease-in-out infinite" }}
+          >
             <Image
-              src="/placeholder-logo.png"
-              alt="The Brain Burners Logo"
+              src="svgs/astro.svg"
+              alt="Astronaut"
               fill
               className="object-contain"
             />
           </div>
 
-          {/* Social Links */}
-          <div className="flex gap-24">
-            <a href="#" className="flex items-center gap-3 text-white hover:text-orange-500 transition-colors">
-              <span className="text-orange-500 text-2xl">📷</span>
-              <span className="text-lg">Instagram</span>
-            </a>
-            <a href="#" className="flex items-center gap-3 text-white hover:text-orange-500 transition-colors">
-              <span className="text-orange-500 text-2xl">💼</span>
-              <span className="text-lg">LinkedIn</span>
-            </a>
-            <a href="#" className="flex items-center gap-3 text-white hover:text-orange-500 transition-colors">
-              <span className="text-orange-500 text-2xl">👍</span>
-              <span className="text-lg">Facebook</span>
-            </a>
+          {/* ==== Right Section - Navigation ==== */}
+          <nav className="border-l pl-0 sm:pl-12  flex flex-row flex-wrap justify-center sm:flex-col gap-6 text-left [border-image:linear-gradient(180deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)_1]">
+            {[
+              { label: "Home", href: "/" },
+              { label: "About us", href: "/about-us" },
+              { label: "Our Team", href: "our-team" },
+              { label: "Services", href: "/services" },
+              { label: "Our Work", href: "/" },
+              { label: "Contact Us", href: "/contact" },
+            ].map((item) => (
+              <button
+                key={item.label}
+                onClick={() => router.push(item.href)}
+                className="text-sm sm:text-2xl border-b [border-b-width:4px] font-semibold border-white pb-2 text-left"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        {/* ===== Divider Line ===== */}
+        <div className="w-full sm:max-w-[1500px] mx-auto h-[1.36px] [background:linear-gradient(90deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)]"></div>
+
+        {/* ===== Footer Section ===== */}
+        <div className="">
+          <div className="flex flex-row items-center justify-start sm:justify-end gap-4 sm:gap-28 px-4 sm:px-8 pb-8">
+            {/* Logo */}
+            <div className="pr-4 sm:pr-12 border-r [border-image:linear-gradient(180deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)_1]">
+              <Image
+                src="svgs/tbblogo.svg"
+                alt="The Brain Burners Logo"
+                width={200}
+                height={60}
+                className="object-contain"
+              />
+            </div>
+
+            {/* Social Links */}
+            <div className="flex  items-center gap-4 sm:gap-25">
+              {[
+                { name: "Instagram", icon: "svgs/insta.svg" },
+                { name: "LinkedIn", icon: "svgs/linkedin.svg" },
+                { name: "Facebook", icon: "svgs/fb.svg" },
+              ].map((social, i, arr) => (
+                <React.Fragment key={social.name}>
+                  <a href="#" className="flex items-center gap-3 ">
+                    <Image
+                      src={social.icon}
+                      alt={social.name}
+                      width={30}
+                      height={30}
+                      className="object-contain"
+                    />
+                    <span className="hidden sm:block text-2xl">
+                      {social.name}
+                    </span>
+                  </a>
+                  {i !== arr.length - 1 && (
+                    <div className="h-25 w-[1px] [background:linear-gradient(180deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)]"></div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* ===== Animation Styles ===== */}
+      <style jsx>{`
+        .animate-float {
+          animation-name: float;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          /* use custom offsets per dot */
+          --tx: 100px;
+          --ty: 80px;
+        }
+
+        @keyframes float {
+          0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0.8;
+          }
+          25% {
+            transform: translate(var(--tx), calc(var(--ty) * -1)) scale(1.05);
+            opacity: 1;
+          }
+          50% {
+            transform: translate(calc(var(--tx) * -1), var(--ty)) scale(0.95);
+            opacity: 0.9;
+          }
+          75% {
+            transform: translate(var(--tx), var(--ty)) scale(1.05);
+            opacity: 1;
+          }
+          100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0.8;
+          }
+        }
+      `}</style>
     </div>
   );
 }

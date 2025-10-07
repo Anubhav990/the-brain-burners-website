@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 
@@ -38,12 +40,12 @@ const TbbCode = () => {
   };
 
   return (
-    <div className="mt-[60px] p-4 md:p-6 relative z-20 max-w-[1300px] mx-auto">
+    <div className="p-4 md:p-6 relative z-20 max-w-[1300px] mx-auto">
       {/* Header */}
       <div className="text-left md:text-center mb-8 md:mb-12">
         <div className="flex items-center justify-start md:justify-center mb-4">
           <div className="w-2 h-2 bg-[#F38400] rounded-full mr-2"></div>
-          <span className="text-[14px] md:text-[15px] text-black font-medium">The Brain Burner's CODE</span>
+          <span className="text-[14px] md:text-[20px] text-black font-medium">The Brain Burner's CODE</span>
         </div>
 
         <h1 className="text-[26px] md:text-3xl font-bold mb-3 md:mb-2 leading-tight">
@@ -84,9 +86,8 @@ const TbbCode = () => {
               {/* Plus → Cross */}
               <div className="w-10 h-10 md:w-14 md:h-14 bg-[#F38400] rounded-full flex items-center justify-center cursor-pointer flex-shrink-0 ml-2">
                 <Plus
-                  className={`w-6 h-6 md:w-8 md:h-8 text-white transform transition-transform duration-300 ${
-                    expandedIndex === index ? "rotate-45" : "rotate-0"
-                  }`}
+                  className={`w-6 h-6 md:w-8 md:h-8 text-white transform transition-transform duration-300 ${expandedIndex === index ? "rotate-45" : "rotate-0"
+                    }`}
                 />
               </div>
             </div>

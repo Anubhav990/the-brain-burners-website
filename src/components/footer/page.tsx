@@ -1,6 +1,10 @@
+import { useRouter } from "next/navigation";
 import React from "react";
 
 export default function Footer() {
+
+    const router = useRouter();
+
     return (
         <div className="max-w-[1300px] mx-auto flex flex-col gap-[4px] px-4 md:px-0">
             {/* Banner Section */}
@@ -29,7 +33,7 @@ export default function Footer() {
             {/* Footer Section */}
             <footer className="w-full px-2 py-4 md:py-8 bg-white relative z-20">
                 <div className="border-2 border-black rounded-[30px] md:rounded-[50px] px-6 md:px-12 py-6 md:py-10">
-                    
+
                     {/* Desktop Layout */}
                     <div className="hidden md:grid grid-cols-[1fr_2fr_1fr_1.2fr] gap-8">
                         {/* About Section */}
@@ -37,16 +41,16 @@ export default function Footer() {
                             <h3 className="font-bold text-lg mb-4 text-black">About</h3>
                             <ul className="space-y-2">
                                 <div className="flex">
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Home</a></li>
-                                    <li><a href="#" className="text-gray-700 pl-[85px] hover:text-black transition">Work</a></li>
+                                    <li><button onClick={() => router.push('/')} className="text-gray-700 hover:text-black transition">Home</button></li>
+                                    <li><button onClick={() => router.push('/')} className="text-gray-700 pl-[85px] hover:text-black transition">Work</button></li>
                                 </div>
                                 <div className="flex">
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Our Team</a></li>
-                                    <li><a href="#" className="text-gray-700 pl-[60px] hover:text-black transition">Contact Us</a></li>
+                                    <li><button onClick={() => router.push('/our-team')} className="text-gray-700 hover:text-black transition">Our Team</button></li>
+                                    <li><button onClick={() => router.push('/contact')} className="text-gray-700 pl-[60px] hover:text-black transition">Contact Us</button></li>
                                 </div>
                                 <div className="flex">
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Services</a></li>
-                                    <li><a href="#" className="text-gray-700 pl-[70px] hover:text-black transition">About Us</a></li>
+                                    <li><button onClick={() => router.push('/services')} className="text-gray-700 hover:text-black transition">Services</button></li>
+                                    <li><button onClick={() => router.push('/about-us')} className="text-gray-700 pl-[70px] hover:text-black transition">About Us</button></li>
                                 </div>
                             </ul>
                         </div>
@@ -56,16 +60,16 @@ export default function Footer() {
                             <h3 className="font-bold text-lg mb-4 text-black">Services</h3>
                             <div className="grid grid-cols-2 gap-x-8 gap-y-2">
                                 <ul className="space-y-2">
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Social Media Management</a></li>
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">SEO</a></li>
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Artificial Intelligence Modernization</a></li>
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Branding</a></li>
+                                    <li><button onClick={() => router.push('/social-media-management')} className="text-gray-700 hover:text-black transition text-start">Social Media Management</button></li>
+                                    <li><button onClick={() => router.push('/seo')} className="text-gray-700 hover:text-black transition text-start">SEO</button></li>
+                                    <li><button onClick={() => router.push('/ai-modernization')} className="text-gray-700 hover:text-black transition text-start">Artificial Intelligence Modernization</button></li>
+                                    <li><button onClick={() => router.push('/branding')} className="text-gray-700 hover:text-black transition text-start">Branding</button></li>
                                 </ul>
                                 <ul className="space-y-2">
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">UI/UX Designing</a></li>
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Application Development</a></li>
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Web Development</a></li>
-                                    <li><a href="#" className="text-gray-700 hover:text-black transition">Performance Marketing</a></li>
+                                    <li><button onClick={() => router.push('/uiux')} className="text-gray-700 hover:text-black transition text-start">UI/UX Designing</button></li>
+                                    <li><button onClick={() => router.push('/app-development')} className="text-gray-700 hover:text-black transition text-start">Application Development</button></li>
+                                    <li><button onClick={() => router.push('/web-development')} className="text-gray-700 hover:text-black transition text-start">Web Development</button></li>
+                                    <li><button onClick={() => router.push('/performance-marketing')} className="text-gray-700 hover:text-black transition text-start">Performance Marketing</button></li>
                                 </ul>
                             </div>
                         </div>
@@ -125,12 +129,12 @@ export default function Footer() {
                         <div className="mb-6">
                             <h3 className="font-semibold text-sm mb-3 text-black">About</h3>
                             <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-                                <a href="#" className="text-gray-700 hover:text-black transition">Home</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Work</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Our Team</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Contact Us</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Services</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">About Us</a>
+                                <button onClick={() => router.push('/')} className="text-gray-700 hover:text-black transition text-start">Home</button>
+                                <button onClick={() => router.push('/')} className="text-gray-700 hover:text-black transition text-start">Work</button>
+                                <button onClick={() => router.push('/our-team')} className="text-gray-700 hover:text-black transition text-start">Our Team</button>
+                                <button onClick={() => router.push('/contact')} className="text-gray-700 hover:text-black transition text-start">Contact Us</button>
+                                <button onClick={() => router.push('/services')} className="text-gray-700 hover:text-black transition text-start">Services</button>
+                                <button onClick={() => router.push('/about-us')} className="text-gray-700 hover:text-black transition text-start">About Us</button>
                             </div>
                         </div>
 
@@ -139,15 +143,15 @@ export default function Footer() {
                         {/* Services Section - Mobile */}
                         <div className="mb-6">
                             <h3 className="font-semibold text-sm mb-3 text-black">Services</h3>
-                            <div className="flex flex-col gap-2 text-sm">
-                                <a href="#" className="text-gray-700 hover:text-black transition">Social Media Management</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">SEO</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Artificial Intelligence Modernization</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Branding</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">UI/UX Designing</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Application Development</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Web Development</a>
-                                <a href="#" className="text-gray-700 hover:text-black transition">Performance Marketing</a>
+                            <div className="flex items-start flex-col gap-2 text-sm">
+                                <button onClick={() => router.push('/social-media-management')} className="text-gray-700 hover:text-black transition">Social Media Management</button>
+                                <button onClick={() => router.push('/seo')} className="text-gray-700 hover:text-black transition">SEO</button>
+                                <button onClick={() => router.push('/ai-modernization')} className="text-gray-700 hover:text-black transition">Artificial Intelligence Modernization</button>
+                                <button onClick={() => router.push('/branding')} className="text-gray-700 hover:text-black transition">Branding</button>
+                                <button onClick={() => router.push('/uiux')} className="text-gray-700 hover:text-black transition">UI/UX Designing</button>
+                                <button onClick={() => router.push('/app-development')} className="text-gray-700 hover:text-black transition">Application Development</button>
+                                <button onClick={() => router.push('/web-development')} className="text-gray-700 hover:text-black transition">Web Development</button>
+                                <button onClick={() => router.push('/performance-marketing')} className="text-gray-700 hover:text-black transition">Performance Marketing</button>
                             </div>
                         </div>
 
@@ -204,3 +208,6 @@ export default function Footer() {
         </div>
     );
 }
+
+
+

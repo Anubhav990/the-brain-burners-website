@@ -50,6 +50,7 @@ const AboutUs = () => {
                 ))}
               </div>
               <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                
                 {/* Astronaut image */}
                 <img
                   src="/moon.png"

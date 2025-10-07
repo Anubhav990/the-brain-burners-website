@@ -3,8 +3,12 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import HeaderModal from '../desktop-header-modal/page';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
+
+    const router = useRouter();
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
@@ -13,6 +17,7 @@ const Header = () => {
                 {/* Logo */}
                 <div className="flex items-center">
                     <Image
+                        onClick={() => router.push('/')}
                         src="/svgs/brainburnerslogo.svg"
                         alt="The Brain Burners"
                         width={140}
