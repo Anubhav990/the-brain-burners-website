@@ -180,7 +180,7 @@ export default function MobileCreationSlider() {
                 {/* CTA Button */}
                 <div className="px-6 pb-8">
                     <button
-                    onClick={() => Router.push('/contact')}
+                    onClick={() => router.push('/contact')}
                     className="w-full bg-[#F38400] text-white font-semibold py-3 px-6 rounded-full hover:scale-105 transition-all shadow-md">
                         Let's Discuss Your Project
                     </button>
