@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import AnimatedDots from "../animateddots/page";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
