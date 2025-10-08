@@ -155,18 +155,20 @@ const Services = () => {
                                 {/* Left side - Image */}
                                 <div className="relative w-full md:w-[45%] min-h-[400px] bg-[#2D2D2D] rounded-3xl">
                                     <Image
+                                        priority
                                         src={item.image}
                                         alt={item.title}
                                         fill
                                         className="object-cover rounded-3xl"
                                     />
                                 </div>
-                                
+
                                 {/* Right side - Content */}
                                 <div className='relative flex-1 p-8 md:p-12 flex flex-col justify-center'>
                                     {/* Logo in top-right corner */}
                                     <div className="absolute top-8 right-8">
                                         <Image
+                                            priority
                                             src={item.backgroundimg}
                                             alt=""
                                             width={80}
@@ -174,7 +176,7 @@ const Services = () => {
                                             className="object-contain"
                                         />
                                     </div>
-                                    
+
                                     <h3 className="text-3xl md:text-4xl font-bold text-black mb-4 underline decoration-2 decoration-gray-400 underline-offset-8">
                                         {item.title}
                                     </h3>
