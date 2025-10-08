@@ -2,8 +2,11 @@
 
 import React, { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function MobileSlider() {
+
+  const router = useRouter();
 
   const services = [
     {
@@ -13,6 +16,7 @@ export default function MobileSlider() {
         "We craft intuitive & visually engaging interfaces that put user experience at the center. Our design process focuses on understanding user behavior, creating seamless & aesthetically pleasing layouts that align with your brand identity.",
       staticIcon: "/gifs/uiuxstatic.svg",
       animatedIcon: "/gifs/uiuxmoving.gif",
+      path: '/uiux'
     },
     {
       id: 2,
@@ -21,6 +25,7 @@ export default function MobileSlider() {
         "We design and develop high-performance applications that bring your ideas to life and empower your business. From mobile apps to enterprise-grade solutions, our applications are built with scalability, security, and usability in mind.",
       staticIcon: "/gifs/appdevstatic.svg",
       animatedIcon: "/gifs/appdevmoving.gif",
+      path: '/app-development'
     },
     {
       id: 3,
@@ -29,6 +34,7 @@ export default function MobileSlider() {
         "We build powerful, scalable, and user-friendly websites tailored to your business needs. From sleek corporate sites to complex web platforms, our development process ensures speed, security & performance across all devices.",
       staticIcon: "/gifs/webdevstatic.svg",
       animatedIcon: "/gifs/webdevmoving.gif",
+      path: '/web-development'
     },
     {
       id: 4,
@@ -37,6 +43,7 @@ export default function MobileSlider() {
         "We create data-driven marketing strategies that focus on measurable results. From paid campaigns and search engine marketing to social media ads and conversion optimization, our approach is designed to maximize ROI.",
       staticIcon: "/gifs/performancestatic.svg",
       animatedIcon: "/gifs/performancemoving.gif",
+      path: '/performance-marketing'
     },
     {
       id: 5,
@@ -45,6 +52,7 @@ export default function MobileSlider() {
         "We optimize your digital presence with smart SEO strategies that boost visibility, improve rankings, and bring organic traffic to your website ensuring your brand is found by the right audience at the right time.",
       staticIcon: "/gifs/seostatic.svg",
       animatedIcon: "/gifs/seomoving.gif",
+      path: '/seo'
     },
     {
       id: 6,
@@ -53,6 +61,7 @@ export default function MobileSlider() {
         "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
       staticIcon: "/gifs/socialmediastatic.svg",
       animatedIcon: "/gifs/socialmediamoving.gif",
+      path: '/social-media-management'
     },
     {
       id: 7,
@@ -61,6 +70,8 @@ export default function MobileSlider() {
         "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
       staticIcon: "/gifs/brandingstatic.svg",
       animatedIcon: "/gifs/brandingmoving.gif",
+      path: '/branding'
+         path: '/branding'
     },
     {
       id: 8,
@@ -69,6 +80,7 @@ export default function MobileSlider() {
         "We ensure your digital products remain reliable, secure, and high-performing through continuous quality analysis and maintenance. Our team conducts rigorous testing to identify and resolve issues, optimize performance.",
       staticIcon: "/gifs/aimodernstatic.svg",
       animatedIcon: "/gifs/aimoving.gif",
+      path: '/ai-modernization'
     },
   ];
 
@@ -160,7 +172,9 @@ export default function MobileSlider() {
                   <p className="text-gray-600 text-[16px] leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
-                  <button className="bg-[#F38400] text-white text-[16px] font-semibold py-2.5 px-5 rounded-full flex items-center gap-2 w-fit transition-colors">
+                  <button
+                    onClick={() => router.push(`${service.path}`)}
+                    className="bg-[#F38400] text-white text-[16px] font-semibold py-2.5 px-5 rounded-full flex items-center gap-2 w-fit transition-colors">
                     Know More
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -177,8 +191,8 @@ export default function MobileSlider() {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`h-1.5 rounded-full transition-all ${index === currentSlide
-                  ? "bg-[#F38400] w-6"
-                  : "bg-gray-300 w-1.5"
+                ? "bg-[#F38400] w-6"
+                : "bg-gray-300 w-1.5"
                 }`}
             />
           ))}
