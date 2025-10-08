@@ -24,17 +24,17 @@ const AstronautHome = () => {
             <div className='md:w-[50%] w-full'>
                 <div className='pt-[30px] sm:pt-[60px] flex flex-col gap-4'>
                     <p className='text-white text-[16px] sm:text-2xl'>We are driven by strong values and a clear purpose. Our commitment is to deliver excellence, build trust, and create meaningful impact through every project we take on. Guided by integrity, innovation, and collaboration, we strive to shape solutions that truly make a difference for our clients and communities.</p>
-                    <p className='text-[18px]'>We value long-term relationships built on collaboration and respect. By combining creativity with technology, we aim to empower businesses, inspire people, and contribute to meaningful change.</p>
+                    <p className='text-[18px] text-white'>We value long-term relationships built on collaboration and respect. By combining creativity with technology, we aim to empower businesses, inspire people, and contribute to meaningful change.</p>
                 </div>
                 <div className='flex gap-5 sm:gap-[10%] mt-5 md:mt-0'>
                     <div className='flex gap-2 items-center'>
                         <p className='text-white text-[30px] sm:text-[90px]'>15+</p>
-                        <p className='uppercase text-[14px]'>Years of <br /> experience</p>
+                        <p className='uppercase text-[14px] text-white'>Years of <br /> experience</p>
                     </div>
 
                     <div className='flex gap-2 items-center '>
                         <p className='text-white text-[30px] sm:text-[90px]'>50+</p>
-                        <p className='uppercase text-[14px]'>successful <br /> projects</p>
+                        <p className='uppercase text-[14px] text-white'>successful <br /> projects</p>
                     </div>
                 </div>
             </div>
