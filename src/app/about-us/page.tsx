@@ -8,9 +8,13 @@ import Footer from "@/components/footer/page";
 import HowItWorksMob from "@/components/line-ani-aboutus-mob/page";
 import Header from "@/components/header/page";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 
 export default function AboutUsSection() {
+
+  const router = useRouter()
+
   return (
     <div>
       <div className="relative">
@@ -42,7 +46,9 @@ export default function AboutUsSection() {
                   </h2>
                 </div>
 
-                <button className="bg-[#F38400] py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl sm:mt-6 mt-0 shadow-[2px_5px_0_#000000]">
+                <button
+                  onClick={() => router.push('/contact')}
+                  className="bg-[#F38400] py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl sm:mt-6 mt-0 shadow-[2px_5px_0_#000000]">
                   <p className="sm:text-[35px] text-[18px]">
                     Let's discuss your project
                   </p>
