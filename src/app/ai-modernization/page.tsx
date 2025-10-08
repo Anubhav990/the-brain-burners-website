@@ -10,9 +10,13 @@ import Image from "next/image";
 import AIServiceCards from "@/components/servicecards/ai";
 import AIToolsCards from "@/components/toolcards/AIToolCards";
 import ScrollText8 from "@/components/servicesscrolltexts/ScrollText8";
+import { useRouter } from "next/navigation";
 
 
 const SocialMedia = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -30,6 +34,7 @@ const SocialMedia = () => {
                         We integrate advanced AI solutions to optimize processes, enhance decision-making, and unlock new growth opportunities.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-4 bg-cover text-white w-[365px] h-16 text-[18px] sm:text-[22px] font-semibold px-5 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block capitalize text-nowrap"
                     >
@@ -89,6 +94,7 @@ const SocialMedia = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >

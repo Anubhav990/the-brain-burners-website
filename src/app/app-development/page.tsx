@@ -11,8 +11,12 @@ import Image from "next/image";
 import ScrollText2 from "@/components/servicesscrolltexts/ScrollText2";
 import AppDevServiceCards from "@/components/servicecards/appdevelopment";
 import AppDevelopmentToolsCards from "@/components/toolcards/AppDevelopmentToolCards";
+import { useRouter } from "next/navigation";
 
 const AppDevelopment = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -29,7 +33,7 @@ const AppDevelopment = () => {
                     <p className="text-[#111111] captalize text-md sm:text-lg lg:text-[32px] font-medium">
                         We design and build applications that are fast, reliable, and easy to use. From concept to launch, we make sure every step feels effortless.
                     </p>
-                    <button
+                    <button onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-4 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block capitalize"
                     >
@@ -89,6 +93,7 @@ const AppDevelopment = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >

@@ -10,8 +10,12 @@ import ScrollText1 from "@/components/servicesscrolltexts/ScrollText1";
 import Image from "next/image";
 import UiUxServiceCards from "@/components/servicecards/uiux";
 import UiUxToolsCards from "@/components/toolcards/UiuxToolCards";
+import { useRouter } from "next/navigation";
 
 const UiUxDesigning = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -30,6 +34,7 @@ const UiUxDesigning = () => {
                         Every click, swipe, and scroll is designed to feel natural.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-4 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block capitalize"
                     >
@@ -91,6 +96,7 @@ const UiUxDesigning = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >
@@ -124,7 +130,7 @@ const UiUxDesigning = () => {
                             efficiency, and a design that’s ready to deliver real impact.
                         </p>
                     </div>
-                   
+
                 </div>
                 <div className="mt-4 block sm:hidden">
                     <Image src="/services/uiux/uiuxtimelinemob.svg" alt="" width={800} height={600} className="" />

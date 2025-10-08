@@ -10,8 +10,12 @@ import Image from "next/image";
 import SocialMediaServiceCards from "@/components/servicecards/socialmediamanagement";
 import SocialMediaToolsCards from "@/components/toolcards/SocialMediaToolCards";
 import ScrollText6 from "@/components/servicesscrolltexts/ScrollText6";
+import { useRouter } from "next/navigation";
 
 const SocialMedia = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -29,6 +33,7 @@ const SocialMedia = () => {
                         We help brands create, manage, and grow their presence across platforms with engaging content and smart strategies.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-4 bg-cover text-white w-[365px] h-16 text-[18px] sm:text-[22px] font-semibold px-5 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block capitalize text-nowrap"
                     >
@@ -88,6 +93,7 @@ const SocialMedia = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >

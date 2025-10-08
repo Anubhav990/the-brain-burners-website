@@ -10,8 +10,12 @@ import Image from "next/image";
 import ScrollText5 from "@/components/servicesscrolltexts/ScrollText5";
 import SeoServiceCards from "@/components/servicecards/seo";
 import SeoToolsCards from "@/components/toolcards/SeoToolCards";
+import { useRouter } from "next/navigation";
 
 const Seo = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -29,6 +33,7 @@ const Seo = () => {
                         We design data-driven campaigns that deliver measurable growth and maximize ROI.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-4 bg-cover text-white w-[365px] h-16 text-[18px] sm:text-[22px] font-semibold px-5 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block capitalize text-nowrap"
                     >
@@ -88,6 +93,7 @@ const Seo = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >

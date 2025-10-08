@@ -11,8 +11,12 @@ import Image from "next/image";
 import ScrollText3 from "@/components/servicesscrolltexts/ScrollText3";
 import WebDevelopmentToolsCards from "@/components/toolcards/WebDevelopmentToolCards";
 import WebDevServiceCards from "@/components/servicecards/webdevelopment";
+import { useRouter } from "next/navigation";
 
 const WebDevelopment = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -89,6 +93,7 @@ const WebDevelopment = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >

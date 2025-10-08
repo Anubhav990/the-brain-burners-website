@@ -11,8 +11,12 @@ import Image from "next/image";
 import ScrollText4 from "@/components/servicesscrolltexts/ScrollText4";
 import PerformanceMarketingServiceCards from "@/components/servicecards/performancemarketing";
 import PerformanceMarketingToolsCards from "@/components/toolcards/PerformanceMarketingToolCards";
+import { useRouter } from "next/navigation";
 
 const PerformanceMarketing = () => {
+
+    const router = useRouter();
+
     return (
         <div>
             <Header />
@@ -89,6 +93,7 @@ const PerformanceMarketing = () => {
                         your brand into new orbits of success.
                     </p>
                     <button
+                        onClick={() => router.push('/contact')}
                         type="submit"
                         className="bg-[url(/btn-bg.png)] my-6 bg-cover text-white w-80 h-16 text-[18px] sm:text-[22px] font-semibold px-6 py-3 sm:px-4 sm:py-3 rounded-full shadow hidden sm:block"
                     >
