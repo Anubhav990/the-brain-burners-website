@@ -37,7 +37,7 @@ const SocialMedia = () => {
                     </button>
                 </div>
                 <div className="w-full h-full sm:w-[40%] sm:h-[600px]">
-                    <Image width={600} height={400} className="w-full h-full" src="/svgs/services-ai.svg" alt="ai" />
+                    <Image priority width={600} height={400} className="w-full h-full" src="/svgs/services-ai.svg" alt="ai" />
                 </div>
             </div>
 

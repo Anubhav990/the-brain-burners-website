@@ -98,6 +98,7 @@ const AnimatedCards: React.FC = () => {
             animatedIcon: "/gifs/aimoving.gif",
             color: "bg-gray-100",
             animatedIconPosition: "-top-[8px] -left-[8px] w-[70px] h-[70px]", // 👈 custom position
+            path: '/ai-modernization'
         },
     ];
 
@@ -169,7 +170,7 @@ const AnimatedCards: React.FC = () => {
                         {/* ===== Button Section ===== */}
                         <div className="mt-6 relative">
                             <button
-                                onClick={() => router.push(`/services/${service.id}`)}
+                                onClick={() => router.push(`${service.path}`)}
                                 className={`bg-orange-500 text-white font-semibold rounded-full flex items-center justify-center transition-all duration-500 ease-out relative shadow-[0px_3px_0_#000000] overflow-hidden ${hoveredCard === service.id
                                     ? "w-[90%] py-3 px-6 shadow-[2px_3px_0_#000000]"
                                     : "w-12 h-12"

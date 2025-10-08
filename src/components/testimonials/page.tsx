@@ -127,7 +127,7 @@ const TestimonialsSlider = () => {
   }, [testimonials.length]);
 
   return (
-    <div className="bg-[#111111] text-white py-8 sm:py-16 px-8 rounded-3xl mx-w-[500px] sm:max-w-[1300px] mx-4 sm:mx-auto mb-20 relative z-20 mt-[110px]">
+    <div className="bg-[#111111] text-white py-8 sm:py-16 px-8 rounded-3xl mx-w-[500px] sm:max-w-[1300px] mx-4 sm:mx-auto mb-10 relative z-20 mt-10 sm:mt-[110px]">
       <div className="flex flex-col lg:flex-row items-start gap-12">
         {/* Left Content - 50% */}
         <div className="w-full lg:w-1/2">

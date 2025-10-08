@@ -3,6 +3,15 @@ import React from "react";
 
 export default function Footer() {
 
+    const socials = [
+        { name: "facebook", url: "https://www.facebook.com/profile.php?id=61561826016009" },
+        { name: "linkedin", url: "https://www.linkedin.com/company/thebrainburners/" },
+        { name: "instagram", url: "https://www.instagram.com/_tbbmedia_?igsh=MXZubnM4b3pqcGhiMw==" },
+        { name: "youtube", url: "https://www.youtube.com/@thebrainburners" },
+        { name: "x", url: "https://x.com/thebrainburners" },
+        { name: "be", url: "https://www.behance.net/thebrainburners" },
+    ];
+
     const router = useRouter();
 
     return (
@@ -42,7 +51,7 @@ export default function Footer() {
                             <ul className="space-y-2">
                                 <div className="flex">
                                     <li><button onClick={() => router.push('/')} className="text-gray-700 hover:text-black transition">Home</button></li>
-                                    <li><button onClick={() => router.push('/')} className="text-gray-700 pl-[85px] hover:text-black transition">Work</button></li>
+                                    <li><button onClick={() => router.push('/portfolio')} className="text-gray-700 pl-[85px] hover:text-black transition">Work</button></li>
                                 </div>
                                 <div className="flex">
                                     <li><button onClick={() => router.push('/our-team')} className="text-gray-700 hover:text-black transition">Our Team</button></li>
@@ -78,12 +87,27 @@ export default function Footer() {
                         <div className="border-r-2 border-black pr-6">
                             <h3 className="font-bold text-lg mb-4 text-black">Socials</h3>
                             <div className="grid grid-cols-3 gap-3">
-                                {["facebook", "linkedin", "instagram", "youtube", "x", "be"].map((icon) => (
+                                {/* {["facebook", "linkedin", "instagram", "youtube", "x", "be"].map((icon) => (
                                     <a key={icon} href="#">
                                         <img
                                             src={`/footer/${icon}.svg`}
                                             className="w-[40px]"
                                             alt={icon}
+                                        />
+                                    </a>
+                                ))} */}
+                                {socials.map((social) => (
+                                    <a
+                                        key={social.name}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:opacity-80 transition"
+                                    >
+                                        <img
+                                            src={`/footer/${social.name}.svg`}
+                                            alt={social.name}
+                                            className="w-[40px]"
                                         />
                                     </a>
                                 ))}
@@ -130,7 +154,7 @@ export default function Footer() {
                             <h3 className="font-semibold text-sm mb-3 text-black">About</h3>
                             <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
                                 <button onClick={() => router.push('/')} className="text-gray-700 hover:text-black transition text-start">Home</button>
-                                <button onClick={() => router.push('/')} className="text-gray-700 hover:text-black transition text-start">Work</button>
+                                <button onClick={() => router.push('/portfolio')} className="text-gray-700 hover:text-black transition text-start">Work</button>
                                 <button onClick={() => router.push('/our-team')} className="text-gray-700 hover:text-black transition text-start">Our Team</button>
                                 <button onClick={() => router.push('/contact')} className="text-gray-700 hover:text-black transition text-start">Contact Us</button>
                                 <button onClick={() => router.push('/services')} className="text-gray-700 hover:text-black transition text-start">Services</button>

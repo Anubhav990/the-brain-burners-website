@@ -1,18 +1,24 @@
 import React from 'react'
+import RotatingCardsSecond from '../rotating-cards-second/page';
+import { useRouter } from 'next/navigation';
 
 const AstronautHome = () => {
+
+    const router = useRouter();
+
     return (
-        <div className="w-[90%] mx-auto md:w-full flex sm:flex-row flex-col bg-[url('/gifs/stars-mobile.gif')] sm:bg-[url('/gifs/astronautstars.gif')] bg-cover bg-center py-12 px-8 rounded-4xl relative z-20">
+        <div className="w-[90%] mx-auto md:w-full flex sm:flex-row flex-col bg-[url('/gifs/stars-mobile.gif')] sm:bg-[url('/gifs/astronautstars.gif')] bg-cover bg-center py-12 px-8 rounded-4xl relative z-10">
             <div className='flex md:w-[50%] w-full'>
                 <div>
                     <div className='flex items-center gap-2 mb-4'>
-                        <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                        <span className="w-3 h-3 bg-[#F38400] rounded-full"></span>
                         <p className='text-[20px] text-white'>About Us</p>
                     </div>
                     <h2 className='font-[700] text-white text-[30px] sm:text-[60px] leading-[70px]'> What We Stand For </h2>
-                    <button className='bg-[#F38400] py-[15px] px-[30px] text-white font-bold capitalize rounded-4xl mt-2 sm:mt-10 shadow-[2px_5px_0_#000000]'>
+                    <button onClick={() => router.push('/contact')} className='block sm:hidden bg-[#F38400] py-[15px] px-[30px] text-white font-bold capitalize rounded-4xl mt-2 sm:mt-10 shadow-[2px_5px_0_#000000]'>
                         <p className='text-[16px] sm:text-[26px]'>Let's discuss your project</p>
                     </button>
+                    <RotatingCardsSecond />
                 </div>
             </div>
             <div className='md:w-[50%] w-full'>

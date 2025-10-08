@@ -19,6 +19,7 @@ import MobileCreationSlider from '../mobile-our-creations-slider/page';
 import FounderHeroMobile from '../mobile-CEO/page';
 import FAQS from '../FAQ/page';
 import RoadMapMobile from '../tbbroadmapmobile/page';
+import RotatingCardsFirst from '../rotating-cards-first/page';
 
 
 const HomeTbb = () => {
@@ -49,10 +50,9 @@ const HomeTbb = () => {
                 <div className='w-full flex sm:flex-row flex-col justify-center text-black'>
                     <div className='md:w-[70%] w-full'>
                         <div className='flex items-center justify-start text-black'>
-                            <p className='font-extrabold leading-10 md:leading-24 md:text-[80px] text-[35px]'>Powerful</p>
+                            <p className='font-extrabold leading-4 sm:leading-24 sm:text-[80px] text-[35px]'>Powerful</p>
                             <div
-                                className="mt-2 ml-5  bg-cover bg-center bg-no-repeat w-[400px]  flex items-center justify-center relative"
-                                style={{ backgroundImage: "url('/orangepaintedbanner.png')" }}
+                                className="mt-2 ml-5 bg-contain sm:bg-cover bg-center bg-no-repeat w-[500px] pt-2 sm:pt-0 sm:w-[400px] bg-[url('/orangepaintedbannermob.svg')] sm:bg-[url('/orangepaintedbanner.png')] flex items-center justify-center relative"
                             >
 
                                 {/* Animated Text */}
@@ -66,14 +66,18 @@ const HomeTbb = () => {
                                 </div>
                             </div>
                         </div>
-                        <p className='font-extrabold leading-14 md:leading-24 text-[35px] md:text-[90px] whitespace-nowrap'>Web & Mobile apps</p>
+                        <p className='font-extrabold leading-[38px] md:leading-24 text-[35px] md:text-[90px] whitespace-nowrap'>Web & Mobile apps</p>
                         {' '}
                         <p className='font-extrabold leading-14 md:leading-24 text-[35px] md:text-[80px]'>start-to-end</p>
                         <p className='font-normal text-[20px] md:text-[30px] mt-2'>We bring <span className='font-extrabold capitalize'>performance</span> & <span className='font-extrabold capitalize'>beauty</span> to the world through technology!</p>
 
-                        <button className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
+                        {/* <button className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
                             <p className='text-[26px]'>Let's discuss your project</p>
-                        </button>
+                        </button> */}
+
+                        <div className="relative z-[9999]">
+                            <RotatingCardsFirst />
+                        </div>
                     </div>
                     <div className='md:w-[30%] md:mt-0 mt-6 w-full'>
                         <Image src="/svgs/astraunauthero.svg" alt="home" width={600} height={400} priority />
@@ -81,11 +85,11 @@ const HomeTbb = () => {
                 </div>
             </div>
             <LogoMarquee />
-            <div className='md:max-w-[1300px] w-full mx-auto py-12 px-4 relative z-20'>
+            <div className='md:max-w-[1300px] w-full mx-auto pt-12 pb-8 px-4 relative z-10'>
                 <div className='flex flex-col sm:flex-row w-full gap-2'>
                     <div className='sm:w-[60%] w-full'>
                         <div className='flex gap-2 items-center mb-4'>
-                            <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
+                            <span className="w-3 h-3 bg-[#F38400] rounded-full"></span>
                             <p className='text-[20px] text-black'>How we can be helpfull</p>
                         </div>
                         {' '}
@@ -123,7 +127,6 @@ const HomeTbb = () => {
             <FounderHeroMobile />
             <FAQS />
             <Footer />
-            {/* <HeaderModal /> */}
         </>
     )
 }

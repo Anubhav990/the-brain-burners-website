@@ -19,18 +19,17 @@ const Services = () => {
             <Header />
             <div className="sm:max-w-[1300px] w-full mx-auto relative flex flex-col md:flex-row justify-center items-center gap-10 px-3 py-6 sm:px-10 sm:py-5 lg:px-10 overflow-x-hidden">
                 <div className="z-10 flex flex-col gap-1 sm:gap-3 px-[20px] sm:px-0 w-full sm:w-[60%]">
-                    <h1 className="text-[#000000] mb-0 sm:mb-2 text-[25px] lg:text-[56px] font-black">
+                    <h1 className="text-[#000000] mb-0 sm:mb-2 text-[25px] lg:text-[64px] font-black">
                         Launchpad
                     </h1>
-                    <div className="text-white bg-[url('/orangepaintedbanner.png')] bg-cover bg-center bg-no-repeat w-[500px] font-black text-[33px] sm:text-6xl uppercase">
-                        of Business
-                    </div>
-                    <p className="text-[#111111] captalize text-md sm:text-lg lg:text-[32px] font-medium">
+                    <Image src="/services/servicesbanner.svg" alt="of business" width={600} height={400} className='hidden sm:block' />
+                    <Image src="/services/servicesbannermob.svg" alt="of business" width={600} height={400} className='sm:hidden block' />
+                    <p className="text-[#111111] captalize text-md sm:text-lg lg:text-[30px] font-medium">
                         From design to development, we’re your mission crew. Every service is a booster, propelling your brand into orbit.
                     </p>
                 </div>
                 <div className="w-full h-full sm:w-[40%] sm:h-[600px]">
-                    <Image width={600} height={400} className="w-full h-full" src="/svgs/services-servicesmain.svg" alt="uiux" />
+                    <Image priority width={600} height={400} className="w-full h-full" src="/svgs/services-servicesmain.svg" alt="uiux" />
                 </div>
             </div>
                <LogoMarquee />

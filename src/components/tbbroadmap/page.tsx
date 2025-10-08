@@ -92,7 +92,7 @@ export default function RoadMap() {
       </div>
 
       {/* === Background Image Layer 1 (middle) === */}
-      <div className="fixed inset-0 z-10 pointer-events-none">
+      <div className="fixed inset-0 z-5 pointer-events-none">
         <Image
           src="/steps/page1blurImg.png"
           alt="Background Australia"
@@ -140,7 +140,7 @@ export default function RoadMap() {
             <div
               className={`absolute left-1/2 -translate-x-1/2 z-20 ${step.dotClass || ""
                 }`}
-            >
+            > 
               <Image
                 src={step.dot}
                 alt="dot"

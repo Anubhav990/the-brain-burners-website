@@ -86,7 +86,7 @@ export default function CreationSlider() {
     <section className="relative z-20 w-full bg-[#f7f7f7] rounded-4xl hidden sm:flex flex-col items-center py-16 px-6 md:px-12 -mt-[30%]">
       {/* Header */}
       <div className="text-center mb-10">
-        <p className="text-orange-500 font-medium">Highlights From Our Creations</p>
+        <p className="text-[#F38400] font-medium">Highlights From Our Creations</p>
         <h2 className="text-3xl md:text-4xl font-bold mt-2 text-black">
           Versatile In Complexity, Industries, <br /> And Design Approaches
         </h2>
@@ -128,13 +128,13 @@ export default function CreationSlider() {
         {/* Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 -left-4 md:-left-8 transform -translate-y-1/2 bg-orange-500 rounded-full p-2 text-white shadow-md hover:bg-orange-600 transition z-10"
+          className="absolute top-1/2 -left-4 md:-left-8 transform -translate-y-1/2 bg-[#F38400] rounded-full p-2 text-white shadow-md hover:bg-orange-600 transition z-10"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 -right-4 md:-right-8 transform -translate-y-1/2 bg-orange-500 rounded-full p-2 text-white shadow-md hover:bg-orange-600 transition z-10"
+          className="absolute top-1/2 -right-4 md:-right-8 transform -translate-y-1/2 bg-[#F38400] rounded-full p-2 text-white shadow-md hover:bg-orange-600 transition z-10"
         >
           <ChevronRight size={24} />
         </button>
@@ -142,7 +142,7 @@ export default function CreationSlider() {
 
       {/* Bottom Button */}
       <div className="mt-12">
-        <button className="bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition">
+        <button className="bg-[#F38400] text-white px-6 py-3 rounded-full text-[20px] font-medium hover:scale-105 transition">
           Let&apos;s Discuss Your Project
         </button>
       </div>

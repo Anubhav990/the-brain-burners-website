@@ -1,77 +1,82 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
-const services = [
-  {
-    id: 1,
-    title: ["UI/UX", "Designing"],
-    description:
-      "We craft intuitive & visually engaging interfaces that put user experience at the center. Our design process focuses on understanding user behavior, creating seamless & aesthetically pleasing layouts that align with your brand identity.",
-    staticIcon: "/testing.jpg",
-    animatedIcon: "/testing.gif",
-  },
-  {
-    id: 2,
-    title: ["Application", "Development"],
-    description:
-      "We design and develop high-performance applications that bring your ideas to life and empower your business. From mobile apps to enterprise-grade solutions, our applications are built with scalability, security, and usability in mind.",
-    staticIcon: "/svgs/appdevelopment.svg",
-    animatedIcon: "/gifs/appdevelopment.gif",
-  },
-  {
-    id: 3,
-    title: ["Web", "Development"],
-    description:
-      "We build powerful, scalable, and user-friendly websites tailored to your business needs. From sleek corporate sites to complex web platforms, our development process ensures speed, security & performance across all devices.",
-    staticIcon: "/svgs/webdevlaptop.svg",
-    animatedIcon: "/gifs/webdevlaptop.gif",
-  },
-  {
-    id: 4,
-    title: ["Performance", "Marketing"],
-    description:
-      "We create data-driven marketing strategies that focus on measurable results. From paid campaigns and search engine marketing to social media ads and conversion optimization, our approach is designed to maximize ROI.",
-    staticIcon: "/svgs/performancemarketing.svg",
-    animatedIcon: "/gifs/webdevlaptop.gif",
-  },
-  {
-    id: 5,
-    title: "SEO",
-    description:
-      "We optimize your digital presence with smart SEO strategies that boost visibility, improve rankings, and bring organic traffic to your website ensuring your brand is found by the right audience at the right time.",
-    staticIcon: "/svgs/seo.svg",
-    animatedIcon: "/gifs/seoanimated.gif",
-  },
-  {
-    id: 6,
-    title: ["Social Media", "Management"],
-    description:
-      "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
-    staticIcon: "/svgs/socialmediamanagement.svg",
-    animatedIcon: "/gifs/sattelite.gif",
-  },
-  {
-    id: 7,
-    title: "Branding",
-    description:
-      "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
-    staticIcon: "/svgs/branding.svg",
-    animatedIcon: "/gifs/brandinganimated.gif",
-  },
-  {
-    id: 8,
-    title: "Artificial Intelligence Modernization",
-    description:
-      "We ensure your digital products remain reliable, secure, and high-performing through continuous quality analysis and maintenance. Our team conducts rigorous testing to identify and resolve issues, optimize performance.",
-    staticIcon: "/svgs/aimodernization.svg",
-    animatedIcon: "/gifs/aianimated.gif",
-  },
-];
-
 export default function MobileSlider() {
+
+  const services = [
+    {
+      id: 1,
+      title: ["UI/UX", "Designing"],
+      description:
+        "We craft intuitive & visually engaging interfaces that put user experience at the center. Our design process focuses on understanding user behavior, creating seamless & aesthetically pleasing layouts that align with your brand identity.",
+      staticIcon: "/gifs/uiuxstatic.svg",
+      animatedIcon: "/gifs/uiuxmoving.gif",
+    },
+    {
+      id: 2,
+      title: ["Application", "Development"],
+      description:
+        "We design and develop high-performance applications that bring your ideas to life and empower your business. From mobile apps to enterprise-grade solutions, our applications are built with scalability, security, and usability in mind.",
+      staticIcon: "/gifs/appdevstatic.svg",
+      animatedIcon: "/gifs/appdevmoving.gif",
+    },
+    {
+      id: 3,
+      title: ["Web", "Development"],
+      description:
+        "We build powerful, scalable, and user-friendly websites tailored to your business needs. From sleek corporate sites to complex web platforms, our development process ensures speed, security & performance across all devices.",
+      staticIcon: "/gifs/webdevstatic.svg",
+      animatedIcon: "/gifs/webdevmoving.gif",
+    },
+    {
+      id: 4,
+      title: ["Performance", "Marketing"],
+      description:
+        "We create data-driven marketing strategies that focus on measurable results. From paid campaigns and search engine marketing to social media ads and conversion optimization, our approach is designed to maximize ROI.",
+      staticIcon: "/gifs/performancestatic.svg",
+      animatedIcon: "/gifs/performancemoving.gif",
+    },
+    {
+      id: 5,
+      title: "SEO",
+      description:
+        "We optimize your digital presence with smart SEO strategies that boost visibility, improve rankings, and bring organic traffic to your website ensuring your brand is found by the right audience at the right time.",
+      staticIcon: "/gifs/seostatic.svg",
+      animatedIcon: "/gifs/seomoving.gif",
+    },
+    {
+      id: 6,
+      title: ["Social Media", "Management"],
+      description:
+        "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
+      staticIcon: "/gifs/socialmediastatic.svg",
+      animatedIcon: "/gifs/socialmediamoving.gif",
+    },
+    {
+      id: 7,
+      title: "Branding",
+      description:
+        "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
+      staticIcon: "/gifs/brandingstatic.svg",
+      animatedIcon: "/gifs/brandingmoving.gif",
+    },
+    {
+      id: 8,
+      title: "Artificial Intelligence Modernization",
+      description:
+        "We ensure your digital products remain reliable, secure, and high-performing through continuous quality analysis and maintenance. Our team conducts rigorous testing to identify and resolve issues, optimize performance.",
+      staticIcon: "/gifs/aimodernstatic.svg",
+      animatedIcon: "/gifs/aimoving.gif",
+    },
+  ];
+
+
+
   const [currentSlide, setCurrentSlide] = useState(0);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const nextSlide = () => {
     if (currentSlide < services.length - 1) {
@@ -85,8 +90,29 @@ export default function MobileSlider() {
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const distance = touchStartX.current - touchEndX.current;
+    const threshold = 50; // minimum swipe distance
+
+    if (distance > threshold) nextSlide();
+    else if (distance < -threshold) prevSlide();
+  };
+
   return (
-    <div className="bg-white flex items-center justify-center p-6 sm:hidden">
+    <div
+      className="bg-white flex items-center justify-center p-6 sm:hidden"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="w-full max-w-sm relative">
         {/* Navigation Arrows */}
         <button
@@ -114,7 +140,6 @@ export default function MobileSlider() {
             {services.map((service, index) => (
               <div key={service.id} className="w-full flex-shrink-0 h-full">
                 <div className="bg-gray-50 rounded-2xl p-6 h-full flex flex-col">
-                  {/* Icon */}
                   <div className="mb-5">
                     <img
                       src={service.staticIcon}
@@ -122,26 +147,20 @@ export default function MobileSlider() {
                       className="w-[50px] h-[50px] object-contain"
                     />
                   </div>
-
-                  {/* Title */}
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     {Array.isArray(service.title)
                       ? service.title.map((t, i) => (
-                          <React.Fragment key={i}>
-                            {t}
-                            <br />
-                          </React.Fragment>
-                        ))
+                        <React.Fragment key={i}>
+                          {t}
+                          <br />
+                        </React.Fragment>
+                      ))
                       : service.title}
                   </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+                  <p className="text-gray-600 text-[16px] leading-relaxed mb-6 flex-grow">
                     {service.description}
                   </p>
-
-                  {/* CTA */}
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-2.5 px-5 rounded-full flex items-center gap-2 w-fit transition-colors">
+                  <button className="bg-[#F38400] text-white text-[16px] font-semibold py-2.5 px-5 rounded-full flex items-center gap-2 w-fit transition-colors">
                     Know More
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -157,11 +176,10 @@ export default function MobileSlider() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`h-1.5 rounded-full transition-all ${
-                index === currentSlide
-                  ? "bg-orange-500 w-6"
+              className={`h-1.5 rounded-full transition-all ${index === currentSlide
+                  ? "bg-[#F38400] w-6"
                   : "bg-gray-300 w-1.5"
-              }`}
+                }`}
             />
           ))}
         </div>

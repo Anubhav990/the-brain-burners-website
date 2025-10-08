@@ -121,7 +121,7 @@ export default function HeaderModal({ onClose }: HeaderModalProps) {
               { label: "About us", href: "/about-us" },
               { label: "Our Team", href: "our-team" },
               { label: "Services", href: "/services" },
-              { label: "Our Work", href: "/" },
+              { label: "Our Work", href: "/portfolio" },
               { label: "Contact Us", href: "/contact" },
             ].map((item) => (
               <button
@@ -140,6 +140,8 @@ export default function HeaderModal({ onClose }: HeaderModalProps) {
 
         {/* ===== Footer Section ===== */}
         <div className="">
+          {/* Add gray gradient border ABOVE footer content */}
+          <div className="hidden sm:block w-full sm:max-w-[1300px] ml-auto h-[1px] [background:linear-gradient(90deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)]"></div>
           <div className="flex flex-row items-center justify-start sm:justify-end gap-4 sm:gap-28 px-4 sm:px-8 pb-8">
             {/* Logo */}
             <div className="pr-4 sm:pr-12 border-r [border-image:linear-gradient(180deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)_1]">
@@ -155,12 +157,12 @@ export default function HeaderModal({ onClose }: HeaderModalProps) {
             {/* Social Links */}
             <div className="flex  items-center gap-4 sm:gap-25">
               {[
-                { name: "Instagram", icon: "svgs/insta.svg" },
-                { name: "LinkedIn", icon: "svgs/linkedin.svg" },
-                { name: "Facebook", icon: "svgs/fb.svg" },
+                { name: "Instagram", icon: "svgs/insta.svg", path: "https://www.instagram.com/_tbbmedia_?igsh=MXZubnM4b3pqcGhiMw==" },
+                { name: "LinkedIn", icon: "svgs/linkedin.svg", path: "https://www.linkedin.com/company/thebrainburners/" },
+                { name: "Facebook", icon: "svgs/fb.svg", path: "https://www.facebook.com/profile.php?id=61561826016009" },
               ].map((social, i, arr) => (
                 <React.Fragment key={social.name}>
-                  <a href="#" className="flex items-center gap-3 ">
+                  <a href={social.path} className="flex items-center gap-3 " target="_blank">
                     <Image
                       src={social.icon}
                       alt={social.name}

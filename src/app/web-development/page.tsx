@@ -9,7 +9,7 @@ import FAQS from "@/components/FAQ/page";
 import ToolsCards from "@/components/toolcards/UiuxToolCards";
 import Image from "next/image";
 import ScrollText3 from "@/components/servicesscrolltexts/ScrollText3";
-import WebDevelopmentToolsCards from "@/components/toolcards/WebDevelopmentToolCards copy";
+import WebDevelopmentToolsCards from "@/components/toolcards/WebDevelopmentToolCards";
 import WebDevServiceCards from "@/components/servicecards/webdevelopment";
 
 const WebDevelopment = () => {
@@ -37,7 +37,7 @@ const WebDevelopment = () => {
                     </button>
                 </div>
                 <div className="w-full h-full sm:w-[40%] sm:h-[600px]">
-                    <Image width={600} height={400} className="w-full h-full" src="/svgs/services-webdev.svg" alt="uiux" />
+                    <Image priority width={600} height={400} className="w-full h-full" src="/svgs/services-webdev.svg" alt="uiux" />
                 </div>
             </div>
 

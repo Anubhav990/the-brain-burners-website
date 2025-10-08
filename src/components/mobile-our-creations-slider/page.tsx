@@ -87,7 +87,7 @@ export default function MobileCreationSlider() {
             <div className="max-w-md w-full bg-white rounded-3xl shadow-lg overflow-hidden">
                 {/* Header */}
                 <div className="px-6 pt-8 pb-6 text-center">
-                    <p className="text-orange-500 text-sm font-medium mb-2">
+                    <p className="text-[#F38400] text-[15px] font-medium mb-2">
                         • Highlights From Our Creations
                     </p>
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
@@ -147,14 +147,14 @@ export default function MobileCreationSlider() {
                         className="absolute left-0 top-1/3 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-50 transition-colors"
                         aria-label="Previous slide"
                     >
-                        <ChevronLeft className="w-6 h-6 text-orange-500" />
+                        <ChevronLeft className="w-6 h-6 text-[#F38400]" />
                     </button>
                     <button
                         onClick={nextSlide}
                         className="absolute right-0 top-1/3 -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-50 transition-colors"
                         aria-label="Next slide"
                     >
-                        <ChevronRight className="w-6 h-6 text-orange-500" />
+                        <ChevronRight className="w-6 h-6 text-[#F38400]" />
                     </button>
                 </div>
 
@@ -165,7 +165,7 @@ export default function MobileCreationSlider() {
                             key={index}
                             onClick={() => setCurrentIndex(index)}
                             className={`h-2 rounded-full transition-all ${index === currentIndex
-                                ? 'w-8 bg-orange-500'
+                                ? 'w-8 bg-[#F38400]'
                                 : 'w-2 bg-gray-300'
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
@@ -175,7 +175,7 @@ export default function MobileCreationSlider() {
 
                 {/* CTA Button */}
                 <div className="px-6 pb-8">
-                    <button className="w-full bg-gradient-to-r from-orange-400 to-orange-500 text-white font-semibold py-3 px-6 rounded-full hover:from-orange-500 hover:to-orange-600 transition-all shadow-md">
+                    <button className="w-full bg-[#F38400] text-white font-semibold py-3 px-6 rounded-full hover:scale-105 transition-all shadow-md">
                         Let's Discuss Your Project
                     </button>
                 </div>

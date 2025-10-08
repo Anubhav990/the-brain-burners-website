@@ -36,7 +36,7 @@ const Seo = () => {
                     </button>
                 </div>
                 <div className="w-full h-full sm:w-[40%] sm:h-[600px]">
-                    <Image width={600} height={400} className="w-full h-full" src="/svgs/services-seo.svg" alt="uiux" />
+                    <Image priority width={600} height={400} className="w-full h-full" src="/svgs/services-seo.svg" alt="uiux" />
                 </div>
             </div>
 

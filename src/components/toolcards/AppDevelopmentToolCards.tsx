@@ -4,15 +4,14 @@ import Image from "next/image";
 import React from "react";
 
 const tools = [
-  { name: "React", img: "/services/appdevelopment/react.svg", gif: "/services/watereffect/watereffect1.gif" },
-  { name: "NextJs", img: "/services/appdevelopment/next.svg", gif: "/services/watereffect/watereffect2.gif" },
+  { name: "React Native", img: "/services/appdevelopment/react.svg", gif: "/services/watereffect/watereffect1.gif" },
   { name: "MongoDb", img: "/services/appdevelopment/mongo.svg", gif: "/services/watereffect/watereffect3.gif" },
   { name: "Express", img: "/services/appdevelopment/express.svg", gif: "/services/watereffect/watereffect4.gif" },
   { name: "Supabase", img: "/services/appdevelopment/supabase.svg", gif: "/services/watereffect/watereffect5.gif" },
-  { name: "Wordpress", img: "/services/appdevelopment/wordpress.svg", gif: "/services/watereffect/watereffect6.gif" },
   { name: "Typescript", img: "/services/appdevelopment/typescript.svg", gif: "/services/watereffect/watereffect7.gif" },
   { name: "JavaScript", img: "/services/appdevelopment/javascript.svg", gif: "/services/watereffect/watereffect8.gif" },
   { name: "Firebase", img: "/services/appdevelopment/firebase.svg", gif: "/services/watereffect/watereffect9.gif" },
+  { name: "NodeJS", img: "/services/webdevelopment/node.svg", gif: "/services/watereffect/watereffect5.gif" },
 ];
 
 export default function AppDevelopmentToolsCards() {

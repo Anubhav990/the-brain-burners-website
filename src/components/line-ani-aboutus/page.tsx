@@ -12,7 +12,7 @@ type Step = {
 
 const steps: Step[] = [
   {
-    image: "/icon1.png",
+    image: "aboutus/creativity.svg",
     title: "Creativity",
     description:
       "We push boundaries with fresh ideas and bold imagination to craft unique solutions.",
@@ -21,7 +21,7 @@ const steps: Step[] = [
     descriptionPosition: "absolute top-49 left-1/2 ml-12 w-[40%]",
   },
   {
-    image: "/icon2.png",
+    image: "aboutus/collaboration.svg",
     title: "Collaboration",
     description:
       "We thrive on teamwork, co-creation, and building strong, lasting partnerships.",
@@ -30,7 +30,7 @@ const steps: Step[] = [
     descriptionPosition: "absolute top-49 right-1/2 mr-12 w-[40%] text-right",
   },
   {
-    image: "/icon3.png",
+    image: "aboutus/exellence.svg",
     title: "Excellence",
     description:
       "We are committed to delivering high-quality outcomes with precision and passion.",
@@ -39,7 +39,7 @@ const steps: Step[] = [
     descriptionPosition: "absolute top-49 left-1/2 ml-12 w-[40%]",
   },
   {
-    image: "/icon4.png",
+    image: "aboutus/adaptability.svg",
     title: "Adaptability",
     description:
       "We embrace change, stay agile, and evolve with every challenge.",
@@ -48,7 +48,7 @@ const steps: Step[] = [
     descriptionPosition: "absolute top-49 right-1/2 mr-12 w-[40%] text-right",
   },
      {
-    image: "/icon5.png",
+    image: "aboutus/integrity.svg",
     title: "Integrity",
     description:
       "We act with honesty, fairness, and accountability in everything we do.",
@@ -57,7 +57,7 @@ const steps: Step[] = [
     descriptionPosition: "absolute top-49 left-1/2 ml-12 w-[40%]",
   },
   {
-    image: "/icon6.png",
+    image: "aboutus/integrity.svg",
     title: "Impact",
     description:
       "We design with purpose, creating solutions that drive real and lasting change.",
@@ -153,7 +153,7 @@ export default function HowItWorks() {
   const tealBottomTop = Math.max(0, lineHeight - 300);
 
   return (
-    <section id="how-it-works" ref={sectionRef} className="relative py-20 overflow-hidden">
+    <section id="how-it-works" ref={sectionRef} className="relative py-20 overflow-hidden hidden sm:block">
       {/* Heading */}
       <h2 className="text-6xl md:text-6xl font-bold text-center text-[#545454] mb-16">
         Our values
