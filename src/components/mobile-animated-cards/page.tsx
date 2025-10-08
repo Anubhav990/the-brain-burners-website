@@ -70,8 +70,7 @@ export default function MobileSlider() {
         "From content creation to audience engagement, we manage your social channels to build community, strengthen brand voice, and drive meaningful interactions that convert followers into loyal customers.",
       staticIcon: "/gifs/brandingstatic.svg",
       animatedIcon: "/gifs/brandingmoving.gif",
-      path: '/branding'
-         path: '/branding'
+      path: '/branding' 
     },
     {
       id: 8,
