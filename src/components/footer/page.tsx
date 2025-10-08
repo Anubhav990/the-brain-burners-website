@@ -87,15 +87,6 @@ export default function Footer() {
                         <div className="border-r-2 border-black pr-6">
                             <h3 className="font-bold text-lg mb-4 text-black">Socials</h3>
                             <div className="grid grid-cols-3 gap-3">
-                                {/* {["facebook", "linkedin", "instagram", "youtube", "x", "be"].map((icon) => (
-                                    <a key={icon} href="#">
-                                        <img
-                                            src={`/footer/${icon}.svg`}
-                                            className="w-[40px]"
-                                            alt={icon}
-                                        />
-                                    </a>
-                                ))} */}
                                 {socials.map((social) => (
                                     <a
                                         key={social.name}
@@ -185,12 +176,18 @@ export default function Footer() {
                         <div className="mb-6">
                             <h3 className="font-semibold text-sm mb-3 text-black">Socials</h3>
                             <div className="flex gap-2 flex-wrap">
-                                {["facebook", "linkedin", "instagram", "youtube", "x", "be"].map((icon) => (
-                                    <a key={icon} href="#" className="w-9 h-9 rounded-lg flex items-center justify-center">
+                                {socials.map((social) => (
+                                    <a
+                                        key={social.name}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:opacity-80 transition"
+                                    >
                                         <img
-                                            src={`/footer/${icon}.svg`}
-                                            className="w-9 h-9"
-                                            alt={icon}
+                                            src={`/footer/${social.name}.svg`}
+                                            alt={social.name}
+                                            className="w-[40px]"
                                         />
                                     </a>
                                 ))}

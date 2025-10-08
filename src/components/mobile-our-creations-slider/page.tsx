@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 type Project = {
     id: number;
@@ -45,6 +46,9 @@ const projects: Project[] = [
 ];
 
 export default function MobileCreationSlider() {
+
+    const router = useRouter();
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [touchStart, setTouchStart] = useState(0);
     const [touchEnd, setTouchEnd] = useState(0);
@@ -175,7 +179,9 @@ export default function MobileCreationSlider() {
 
                 {/* CTA Button */}
                 <div className="px-6 pb-8">
-                    <button className="w-full bg-[#F38400] text-white font-semibold py-3 px-6 rounded-full hover:scale-105 transition-all shadow-md">
+                    <button
+                    onClick={() => Router.push('/contact')}
+                    className="w-full bg-[#F38400] text-white font-semibold py-3 px-6 rounded-full hover:scale-105 transition-all shadow-md">
                         Let's Discuss Your Project
                     </button>
                 </div>

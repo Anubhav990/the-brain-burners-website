@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type Project = {
   id: number;
@@ -48,6 +49,9 @@ const projects: Project[] = [
 ];
 
 export default function CreationSlider() {
+
+  const router = useRouter();
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(2);
 
@@ -142,7 +146,9 @@ export default function CreationSlider() {
 
       {/* Bottom Button */}
       <div className="mt-12">
-        <button className="bg-[#F38400] text-white px-6 py-3 rounded-full text-[20px] font-medium hover:scale-105 transition">
+        <button
+        onClick={() => router.push('/contact')}
+        className="bg-[#F38400] text-white px-6 py-3 rounded-full text-[20px] font-medium hover:scale-105 transition">
           Let&apos;s Discuss Your Project
         </button>
       </div>

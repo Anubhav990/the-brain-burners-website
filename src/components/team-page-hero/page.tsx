@@ -17,7 +17,7 @@ const HeroSection = () => {
         </p>
       </div>
       <div className="w-full h-full md:w-[1400px] md:h-[450px]">
-        <img className="w-full h-full" src="team.png" />
+        <Image priority alt="team" width={600} height={400} className="w-full h-full" src="team.png" />
       </div>
     </div>
   );
