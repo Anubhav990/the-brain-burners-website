@@ -294,6 +294,7 @@ import Header from "@/components/header/page";
 import { useState, useEffect } from "react";
 import Branding from "../testing-2/page";
 import Applications from "@/components/applications/page";
+import Image from "next/image";
 
 interface PortfolioItem {
     id: string;
@@ -420,10 +421,13 @@ const PortfolioCard = ({ item }: { item: PortfolioItem }) => {
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        <img
+                        <Image
                             src={item.images[currentImageIndex]}
                             alt={item.title}
                             className="w-full h-full object-cover rounded-3xl"
+                            width={600}
+                            height={400}
+                            priority
                         />
 
                         {isHovered && item.images.length > 1 && (
