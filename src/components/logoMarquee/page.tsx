@@ -3,22 +3,39 @@
 import React from 'react';
 
 const logos = [
-  { name: 'Panasonic', src: '/panasonic.png', alt: 'Panasonic' },
-  { name: 'Dine First', src: '/dine-first.png', alt: 'dinefirst' },
-  { name: 'Rim Tuni', src: '/rimtuni.png', alt: 'rimtuni' },
-  { name: 'Jobjaro', src: '/jobjaro.png', alt: 'Jobjaro' },
-  { name: 'Posterized', src: '/posterized.png', alt: 'posterized' },
-  { name: 'Tiny', src: '/tiny.png', alt: 'tiny' },
-  { name: 'Core Immigration', src: '/core-immigration.png', alt: 'core-immigration' },
-  { name: 'Rejuvcare', src: '/rejuv-care.png', alt: 'rejuvcare' },
-  { name: 'RoopVeda', src: '/roopveda.png', alt: 'roopveda' },
-  { name: 'VisaBox', src: '/visabox.png', alt: 'visabox' },
-  { name: 'PizzaDelight', src: '/pizzadelight.png', alt: 'pizzadelight' },
+  { name: 'Panasonic', src: '/marquee/panasonic.png', alt: 'Panasonic' },
+  { name: 'Edulinks', src: '/marquee/edulinks.png', alt: 'Edulinks' },
+  { name: 'Dine First', src: '/marquee/dinefirst.png', alt: 'Dine First' },
+  { name: 'Jobjaro', src: '/marquee/jobjaro.png', alt: 'Jobjaro' },
+  { name: 'Leverage Edu', src: '/marquee/leverage.png', alt: 'leverage' },
+  { name: 'Skillzy', src: '/marquee/skillzy.png', alt: 'Skillzy' },
+  { name: 'Rimt uni', src: '/marquee/rimtuni.png', alt: 'rimtuni' },
+  { name: 'Tiny', src: '/marquee/tiny.png', alt: 'tiny' },
+  { name: 'Core Immigration', src: '/marquee/core.png', alt: 'core-immigration' },
+  { name: 'Finn', src: '/marquee/finn.png', alt: 'Finn' },
+  { name: 'Queens Drive', src: '/marquee/queens.png', alt: 'Queens Drive' },
+  { name: 'Roop Veda', src: '/marquee/roopveda.png', alt: 'Roop Veda' },
+  { name: 'Visa Box', src: '/marquee/visabox.png', alt: 'Visa Box' },
+  { name: 'PizzaDelight', src: '/marquee/pizzadelight.png', alt: 'pizzadelight' },
+  { name: 'Themud', src: '/marquee/themud.png', alt: 'Themud' },
+  { name: 'Posterized', src: '/marquee/posterized.png', alt: 'posterized' },
+  { name: 'AccountingExperts', src: '/marquee/accounting.png', alt: 'AccountingExperts' },
+  { name: 'Slavery', src: '/marquee/slaveryfootprint.png', alt: 'Slavery' },
+  { name: 'Aeis', src: '/marquee/aeis.png', alt: 'Aeis' },
+  { name: 'Nownforever', src: '/marquee/nownforever.png', alt: 'Nownforever' },
+  { name: 'Zarl', src: '/marquee/zarl.png', alt: 'Zarl' },
+  { name: 'SkinInspired', src: '/marquee/skininspired.png', alt: 'SkinInspired' },
+  { name: 'InstitueBanking', src: '/marquee/instituebanking.png', alt: 'InstitueBanking' },
+  { name: 'Hoopsie', src: '/marquee/hoopsie.png', alt: 'Hoopsie' },
+  { name: 'Infutrix', src: '/marquee/infutrix.png', alt: 'Infutrix' },
+  { name: 'Zaucto', src: '/marquee/zaucto.png', alt: 'Zaucto' },
+  { name: 'Primedepth', src: '/marquee/primedepth.png', alt: 'Primedepth' },
+  { name: 'Propertypro', src: '/marquee/propertypro.png', alt: 'Propertypro' },
 ];
 
 const LogoMarquee = () => {
   return (
-    <div className="w-full overflow-hidden bg-gray-100 py-4 relative z-10">
+    <div className="w-full overflow-hidden bg-gray-100 py-[4px] relative z-10">
       <div className="flex animate-marquee">
 
         {/* First set */}
@@ -32,8 +49,7 @@ const LogoMarquee = () => {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain 
-                          grayscale opacity-70 transition-all duration-300"
+                className="max-w-full max-h-full w-auto h-auto object-contain opacity-70 transition-all duration-300"
               />
             </div>
           ))}
@@ -50,8 +66,7 @@ const LogoMarquee = () => {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain 
-                          grayscale opacity-70 transition-all duration-300"
+                className="max-w-full max-h-full w-auto h-auto object-contain opacity-70 transition-all duration-300"
               />
             </div>
           ))}

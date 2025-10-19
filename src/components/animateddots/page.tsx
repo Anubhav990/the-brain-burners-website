@@ -84,7 +84,7 @@ const AnimatedDots = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none "
+      className="absolute inset-0 w-full h-full pointer-events-none"
       style={{ opacity: 0.8 }}
     />
   );

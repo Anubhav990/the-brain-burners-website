@@ -31,67 +31,67 @@ const TestimonialsSlider = () => {
     },
      {
       id: 5,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/hochefull.svg",
+      logo: "/sliders/toprightlogos/hochehalf.svg",
       text: "Minimal yet expressive the design captured our identity down to the detail. Their design team gets fashion!",
     },
      {
       id: 6,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/zarfull.svg",
+      logo: "/sliders/toprightlogos/zarhalf.svg",
       text: "We wanted vibrant, bold, and festive and they absolutely nailed it. Customers love how easy it is to browse now.",
     },
      {
       id: 7,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/queensdrivefull.svg",
+      logo: "/sliders/toprightlogos/drivequeenshalf.svg",
       text: "This site races literally. Fast load speeds, sharp UI, and a luxurious look. Couldn’t be more aligned with our brand.",
     },
 
     {
       id: 8,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/tinyfull.svg",
+      logo: "/sliders/toprightlogos/tinyhalf.svg",
       text: "The new design is warm and welcoming. It makes our product offerings clearer and improves navigation for parents. Fantastic work!",
     },
     {
       id: 9,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/slaveryfull.svg",
+      logo: "/sliders/toprightlogos/slaveryfootprinthalf.svg",
       text: "It’s rare to find a team that combines technical skill with empathy. They helped us deliver a powerful, meaningful message through design.",
     },
     {
       id: 10,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/tailorworfull.svg",
+      logo: "/sliders/toprightlogos/tailworcompanyhalf.svg",
       text: "Their design brought clarity to our message and gave us a polished, professional online presence.",
     },
 
     {
       id: 11,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/aeisfull.svg",
+      logo: "/sliders/toprightlogos/aeishalf.svg",
       text: "Scalable, secure, and beautifully designed our global users now have an experience worth remembering.",
     },
 
     {
       id: 12,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/coreimmigrationfull.svg",
+      logo: "/sliders/toprightlogos/coreimmigrationhalf.svg",
       text: "The structure now guides users perfectly. We’ve seen a significant increase in form submissions since launch.",
     },
 
     {
       id: 13,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/leverageedufull.svg",
+      logo: "/sliders/toprightlogos/leverageduhalf.svg",
       text: "They brought our AI-driven vision to life with clarity and style. The UX is top-tier.",
     },
 
     {
       id: 14,
-      company: "/sliders/fulllogos/posterizedfull.svg",
-      logo: "/sliders/toprightlogos/posterizedhalf.svg",
+      company: "/sliders/fulllogos/accountingfull.svg",
+      logo: "/sliders/toprightlogos/accountingexpertshalf.svg",
       text: "We offer complex services now explained with ease. The redesign helped us earn more trust and more leads.",
     },
 
@@ -166,7 +166,7 @@ const TestimonialsSlider = () => {
               {duplicatedTestimonials.map((testimonial, index) => ( 
                 <div
                   key={`${testimonial.id}-${index}`}
-                  className="w-80 h-[400px] flex-shrink-0"
+                  className="w-80 h-[360px] flex-shrink-0"
                 >
                   <div
                     className="relative bg-white  text-[#333333] rounded-2xl p-8 shadow-lg min-h-[280px] flex flex-col justify-between bg-[length:150px_150px] bg-no-repeat bg-center h-full"
@@ -176,16 +176,16 @@ const TestimonialsSlider = () => {
                     {/* Top Section with Images */}
                     <div className="flex justify-between items-start mb-35 ">
                       {/* Top Left - Company Logo */}
-                      <div className="absolute -top-5 left-3 w-[130px] h-24">
+                      <div className="absolute -top-5 left-10 w-[130px] h-24">
                         <img
                           src={testimonial.company}
                           alt="company logo"
-                          className="w-[130px] h-36 object-contain"
+                          className="w-[120px] h-40 object-contain"
                         />
                       </div>
 
                       {/* Top Right - Unique Icon */}
-                      <div className="absolute top-0 right-0 w-24 h-24">
+                      <div className="absolute top-0 right-0 w-32 h-32">
                         <img
                           src={testimonial.logo}
                           alt="icon"

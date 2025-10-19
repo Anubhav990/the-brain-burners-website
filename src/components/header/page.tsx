@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <div>
-            <header className="max-w-[1200px] w-full mx-auto flex items-center justify-between px-2 py-4 bg-white">
+            <header className="max-w-[1280px] w-full mx-auto flex items-center justify-between px-2 py-4 bg-white">
                 {/* Logo */}
                 <div className="flex items-center">
                     <Image
@@ -23,13 +23,14 @@ const Header = () => {
                         width={140}
                         height={40}
                         priority
+                        className='w-[165px]'
                     />
                 </div>
 
                 {/* Hamburger Icon */}
                 <div
                     onClick={() => setIsModalOpen(true)}
-                    className="w-[50px] flex flex-col justify-between">
+                    className="w-[50px] flex flex-col justify-between hover:scale-110 ease-in-out duration-300 cursor-pointer">
                     <Image src="/svgs/tbbhamburgermenu.svg" alt="menu" width={600} height={400} priority />
                 </div>
             </header>

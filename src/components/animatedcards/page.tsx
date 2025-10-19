@@ -171,11 +171,14 @@ const AnimatedCards: React.FC = () => {
                         <div className="mt-6 relative">
                             <button
                                 onClick={() => router.push(`${service.path}`)}
-                                className={`bg-orange-500 text-white font-semibold rounded-full flex items-center justify-center transition-all duration-500 ease-out relative shadow-[0px_3px_0_#000000] overflow-hidden ${hoveredCard === service.id
-                                    ? "w-[90%] py-3 px-6 shadow-[2px_3px_0_#000000]"
-                                    : "w-12 h-12"
+                                className={`font-semibold rounded-full flex items-center justify-center transition-all duration-500 ease-out relative shadow-[0px_3px_0_#000000] overflow-hidden
+                                    ${hoveredCard === service.id
+                                        ? "bg-white text-orange-500 w-[90%] py-3 px-6 shadow-[2px_3px_0_#000000]"
+                                        : "bg-[#F38400] text-white w-12 h-12"
                                     }`}
                             >
+
+
                                 <span
                                     className={`transition-all duration-300 text-[20px] whitespace-nowrap ${hoveredCard === service.id
                                         ? "opacity-100 mr-2"

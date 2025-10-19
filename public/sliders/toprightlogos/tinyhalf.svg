@@ -1,10 +1,10 @@
 <svg width="278" height="278" viewBox="0 0 278 278" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M0.0214844 0H277.309V277.288H200.126C89.6113 277.288 0.0214844 187.698 0.0214844 77.1833V0Z" fill="#111111" fill-opacity="0.4"/>
-<mask id="mask0_1523_26316" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="84" y="148" width="63" height="21">
-<rect x="84.3516" y="148.649" width="62.2548" height="20.0105" fill="url(#pattern0_1523_26316)"/>
+<path d="M0 0H277.288V277.288H200.105C89.5898 277.288 0 187.698 0 77.1833V0Z" fill="#111111" fill-opacity="0.4"/>
+<mask id="mask0_1523_26316" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="71" y="126" width="125" height="41">
+<rect x="71" y="126" width="124.51" height="40.0209" fill="url(#pattern0_1523_26316)"/>
 </mask>
 <g mask="url(#mask0_1523_26316)">
-<rect x="84.3516" y="148.649" width="62.5724" height="20.1126" fill="#0C0C0D"/>
+<rect x="71" y="126" width="125.145" height="40.2251" fill="#0C0C0D"/>
 </g>
 <defs>
 <pattern id="pattern0_1523_26316" patternContentUnits="objectBoundingBox" width="1" height="1">

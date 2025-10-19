@@ -43,7 +43,7 @@ export default function FAQS() {
   const [placeholderHeight, setPlaceholderHeight] = useState(0);
 
   const TOP_OFFSET = 95;
-  const STOP_OFFSET = 130;
+  const STOP_OFFSET = 105;
 
   useEffect(() => {
     const handleScroll = () => {

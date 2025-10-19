@@ -97,20 +97,18 @@ export default function RoadMap() {
           src="/steps/page1blurImg.png"
           alt="Background Australia"
           fill
-          className="object-contain opacity-100 translate-y-65"
+          className="object-contain opacity-100 translate-y-75"
           priority
         />
       </div>
 
       {/* Section Title */}
       <div className="relative z-20 text-center w-full mx-auto mb-20 px-4">
-        <div className="ml-28 flex justify-start gap-5 items-center mb-2">
-          <span className="w-3 h-3 bg-orange-500 rounded-full"></span>
-          <h2 className="text-[15px] font-medium capitalize tracking-widest text-black text-start">
-            The Brain Burners Roadmap
-          </h2>
+        <div className="flex items-center justify-start ml-28 mb-2">
+          <span className="w-3 h-3 bg-[#F38400] rounded-full mr-2"></span>
+          <span className="text-[14px] md:text-[20px] text-black font-medium">  The Brain Burners Roadmap</span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold leading-snug text-black">
+        <h1 className="text-4xl md:text-[45px] sm:text-start sm:pl-[110px] capitalize font-bold leading-snug text-black">
           “Designing intuitive, human-centered experiences<br /> that grow with innovation and user needs.”
         </h1>
       </div>

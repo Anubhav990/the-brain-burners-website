@@ -136,12 +136,12 @@ export default function HeaderModal({ onClose }: HeaderModalProps) {
         </div>
 
         {/* ===== Divider Line ===== */}
-        <div className="w-full sm:max-w-[1500px] mx-auto h-[1.36px] [background:linear-gradient(90deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)]"></div>
+        <div className="w-full sm:max-w-[1500px] mx-auto h-[1.36px] [background:linear-gradient(90deg,rgba(18,18,18,0.3)_10%,rgba(255,255,255,0.3)_40%,rgba(18,18,18,0.3)_100%)] text-black">""</div>
 
         {/* ===== Footer Section ===== */}
         <div className="">
           {/* Add gray gradient border ABOVE footer content */}
-          <div className="hidden sm:block w-full sm:max-w-[1300px] ml-auto h-[1px] [background:linear-gradient(90deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)]"></div>
+          {/* <div className="hidden sm:block w-full sm:max-w-[1300px] ml-auto h-[1px] [background:linear-gradient(90deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)]"></div> */}
           <div className="flex flex-row items-center justify-start sm:justify-end gap-4 sm:gap-28 px-4 sm:px-8 pb-8">
             {/* Logo */}
             <div className="pr-4 sm:pr-12 border-r [border-image:linear-gradient(180deg,rgba(18,18,18,0.3)_0%,rgba(255,255,255,0.3)_50%,rgba(18,18,18,0.3)_100%)_1]">
@@ -168,9 +168,9 @@ export default function HeaderModal({ onClose }: HeaderModalProps) {
                       alt={social.name}
                       width={30}
                       height={30}
-                      className="object-contain"
+                      className="object-contain w-8 h-8"
                     />
-                    <span className="hidden sm:block text-2xl">
+                    <span className="hidden sm:block text-2xl mt-[5px]">
                       {social.name}
                     </span>
                   </a>

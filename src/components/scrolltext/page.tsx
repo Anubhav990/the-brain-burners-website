@@ -35,7 +35,7 @@ export default function Page9() {
           </p>
           <p>
             With Creativity, Strategy, And Precision, We Help Brands Ignite
-            Their Vision—
+            Their Vision
           </p>
           <p>
             Whether Building From The Ground Up Or Elevating What Already Exists.
@@ -53,7 +53,7 @@ export default function Page9() {
           </p>
           <p>
             With Creativity, Strategy, And Precision, We Help Brands Ignite
-            Their Vision—
+            Their Vision
           </p>
           <p className="mb-3 pb-3">
             Whether Building From The Ground Up Or Elevating What Already Exists.

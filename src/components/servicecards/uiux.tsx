@@ -7,7 +7,7 @@ export default function UiUxServiceCards() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-12 mt-0 sm:mt-10">
       {/* DESKTOP / TABLET VIEW */}
-      <div className="hidden md:flex flex-col gap-4">
+      <div className="hidden md:flex flex-col gap-1">
         {/* Row 1 */}
         <div className="flex justify-center gap-4">
           {/* Card 1 */}

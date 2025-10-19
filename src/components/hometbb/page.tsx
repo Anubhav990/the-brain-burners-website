@@ -20,9 +20,12 @@ import FounderHeroMobile from '../mobile-CEO/page';
 import FAQS from '../FAQ/page';
 import RoadMapMobile from '../tbbroadmapmobile/page';
 import RotatingCardsFirst from '../rotating-cards-first/page';
+import { useRouter } from 'next/navigation';
 
 
 const HomeTbb = () => {
+
+    const router = useRouter();
 
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
@@ -71,13 +74,11 @@ const HomeTbb = () => {
                         <p className='font-extrabold leading-14 md:leading-24 text-[35px] md:text-[80px]'>start-to-end</p>
                         <p className='font-normal text-[20px] md:text-[30px] mt-2'>We bring <span className='font-extrabold capitalize'>performance</span> & <span className='font-extrabold capitalize'>beauty</span> to the world through technology!</p>
 
-                        {/* <button className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
+                        <button
+                        onClick={() => router.push('/contact')}
+                        className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
                             <p className='text-[26px]'>Let's discuss your project</p>
-                        </button> */}
-
-                        <div className="relative z-[9999]">
-                            <RotatingCardsFirst />
-                        </div>
+                        </button>
                     </div>
                     <div className='md:w-[30%] md:mt-0 mt-6 w-full'>
                         <Image src="/svgs/astraunauthero.svg" alt="home" width={600} height={400} priority />
