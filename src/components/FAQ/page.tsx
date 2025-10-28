@@ -6,29 +6,52 @@ import { FaChevronCircleDown, FaChevronCircleUp } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "What is edulinks?",
+    question: "What services does The Brain Burners (TBB) provide?",
     answer:
-      "EduLinks is an AI-powered career guidance and learning platform that helps students discover the right career path, prepare for exams, and apply to top universities all in one place.",
+      "TBB is a full-stack IT company specializing in custom UI/UX design, app and website development, Performance Marketing, SEO, Branding, Social Media Management and Artificial Intelligence Modernization. We create tailored digital solutions that combine technology, creativity, and strategy ensuring every brand we work with stands out online.",
   },
   {
-    question: "Who can use edulinks?",
+    question: "What makes TBB different from other IT companies?",
     answer:
-      "EduLinks is designed for students, parents, and professionals seeking guidance in education, career, and skill development.",
+      "Unlike agencies that recycle templates, TBB designs every UI/UX from scratch, giving your brand a unique visual identity. We focus on functionality, speed, and design psychology — not just looks — ensuring your website or app actually converts visitors into customers.",
   },
   {
-    question: "What makes edulinks different from other edtech apps?",
+    question: "How does TBB work with clients?",
     answer:
-      "EduLinks combines personalized AI guidance, expert mentorship, and community support, making it unique compared to traditional edtech platforms.",
+      "We start with a discovery call to understand your goals, audience, and brand tone. Then, we share a custom project roadmap with design mockups, timelines, and development phases. You’re kept in the loop through every milestone from concept to deployment..",
   },
   {
-    question: "Is the career test accurate?",
+    question: "Can TBB handle everything from design to marketing?",
     answer:
-      "Yes, the career test is backed by scientific methods and AI insights, ensuring reliable recommendations for students.",
+      "Yes. TBB offers a complete digital ecosystem — UI/UX, web & app development, branding, SEO, and social media management. You don’t need multiple vendors; we build and grow your brand under one roof.",
   },
   {
-    question: "Is my data safe on edulinks?",
+    question: "How long does it take to develop a website or app?",
+    answer: `It depends on project size:
+Landing Page: 5–7 days
+
+Corporate Website: 2–4 weeks
+
+Custom Web/App Project: 6–10 weeks
+We deliver sample designs early so you can visualize direction before full development.`,
+  },
+  {
+    question: "What do I receive at the end of the project?",
     answer:
-      "Absolutely. EduLinks prioritizes user privacy with strict security measures and data protection standards.",
+      `You’ll get:
+
+Complete source files (Figma, XD, codebase)
+
+Deployment on your server or app store
+
+Brand assets (icons, fonts, color codes)
+
+Documentation & optional post-launch support`
+  },
+  {
+    question: "Do you provide hosting and domain services too?",
+    answer:
+      "We can assist with domain registration, server setup, SSL integration, and website hosting — or work with your existing infrastructure if you already have one.",
   },
 ];
 
@@ -104,7 +127,7 @@ export default function FAQS() {
       ref={containerRef}
       className="z-20 relative max-w-[1300px] mx-auto py-13 grid grid-cols-1 md:grid-cols-2 gap-0 sm:gap-10 items-start"
     >
-      {/* LEFT COLUMN */} 
+      {/* LEFT COLUMN */}
       <div className="relative left-0 sm:left-16 ">
         {style.position !== "static" && (
           <div aria-hidden style={{ height: placeholderHeight }} />
@@ -153,9 +176,8 @@ export default function FAQS() {
             </div>
 
             <div
-              className={`transition-all duration-500 overflow-hidden ${
-                openIndex === index ? "max-h-96 mt-2" : "max-h-0"
-              }`}
+              className={`transition-all duration-500 overflow-hidden ${openIndex === index ? "max-h-96 mt-2" : "max-h-0"
+                }`}
             >
               <p className="text-gray-700 px-4 text-sm sm:text-base">
                 {faq.answer}

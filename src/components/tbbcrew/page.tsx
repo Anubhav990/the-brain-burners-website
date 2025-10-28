@@ -5,77 +5,77 @@ const crewMembers = [
     {
         name: "Neha Nadda",
         role: "Creative Head",
-        image: "/crew/neha.svg",
+        image: "/crew/neha.png",
     },
     {
         name: "Manmeet Singh",
         role: "UX/UI Designer",
-        image: "/crew/manmeet.svg",
+        image: "/crew/manmeet.png",
     },
     {
         name: "Nipun Sharma",
         role: "UX/UI Designer",
-        image: "/crew/nipun.svg",
+        image: "/crew/nipun.png",
     },
     {
         name: "Manan Partap Munday",
         role: "UX/UI Designer",
-        image: "/crew/manan.svg",
+        image: "/crew/manan.png",
     },
     {
         name: "Archit Sharma",
         role: "UX/UI Designer",
-        image: "/crew/archit.svg",
+        image: "/crew/archit.png",
     },
     {
         name: "Ankita Dutt",
         role: "UX/UI Designer",
-        image: "/crew/ankita.svg",
+        image: "/crew/ankita.png",
     },
     {
         name: "Rahul Kumar Sinha",
         role: "Graphic Designer",
-        image: "/crew/rahul.svg",
+        image: "/crew/rahul.png",
     },
     {
         name: "Devesh",
         role: "Video Editor",
-        image: "/crew/devesh.svg",
+        image: "/crew/devesh.png",
     },
     {
         name: "Rajni",
         role: "Social Media Manager",
-        image: "/crew/rajni.svg",
+        image: "/crew/rajni.png",
     },
     {
         name: "Anubhav Gupta",
         role: "Head of Development",
-        image: "/crew/anubhav.svg",
+        image: "/crew/anubhav.png",
     },
     {
         name: "Sharan",
         role: "Full Stack Developer",
-        image: "/crew/sharan.svg",
+        image: "/crew/sharan.png",
     },
     {
         name: "Uday Goyal",
         role: "Full Stack Developer",
-        image: "/crew/uday.svg",
+        image: "/crew/uday.png",
     },
     {
         name: "Shruti Sharma",
         role: "Full Stack Developer",
-        image: "/crew/shruti.svg",
+        image: "/crew/shruti.png",
     },
     {
         name: "Raghav",
         role: "Full Stack Developer",
-        image: "/crew/raghav.svg",
+        image: "/crew/raghav.png",
     },
     {
         name: "Ashima Sharma",
         role: "Google Ads Specialist",
-        image: "/crew/ashima.svg",
+        image: "/crew/ashima.png",
     },
 
 ];
