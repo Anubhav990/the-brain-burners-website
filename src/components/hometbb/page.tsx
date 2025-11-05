@@ -21,6 +21,7 @@ import FAQS from '../FAQ/page';
 import RoadMapMobile from '../tbbroadmapmobile/page';
 import RotatingCardsFirst from '../rotating-cards-first/page';
 import { useRouter } from 'next/navigation';
+import ClientVideoSection from '../clientvideo/page';
 
 
 const HomeTbb = () => {
@@ -75,8 +76,8 @@ const HomeTbb = () => {
                         <p className='font-normal text-[20px] md:text-[30px] mt-2'>We bring <span className='font-extrabold capitalize'>performance</span> & <span className='font-extrabold capitalize'>beauty</span> to the world through technology!</p>
 
                         <button
-                        onClick={() => router.push('/contact')}
-                        className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
+                            onClick={() => router.push('/contact')}
+                            className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
                             <p className='text-[26px]'>Let's discuss your project</p>
                         </button>
                     </div>
@@ -122,6 +123,7 @@ const HomeTbb = () => {
             <CreationSlider />
             <MobileCreationSlider />
             <TestimonialsSlider />
+            <ClientVideoSection />
             <TbbCode />
             <CrewTBB />
             <CEO />

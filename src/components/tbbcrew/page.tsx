@@ -84,7 +84,7 @@ const CrewTBB = () => {
     return (
         <>
             <div className='mx-auto max-w-[1300px] mt-12 sm:mt-[60px] relative z-20'>
-                <div className="flex items-center justify-start md:justify-center mb-4">
+                <div className="flex items-center justify-start md:justify-center mb-4 sm:ml-0 ml-4">
                     <div className="w-2 h-2 bg-[#F38400] rounded-full mr-2"></div>
                     <span className="text-[14px] md:text-[20px] text-black font-medium capitalize">the brain burner’s TEAM</span>
                 </div>
