@@ -137,7 +137,7 @@ const portfolioItems: PortfolioItem[] = [
         images: ["/portfolio/pizzadelight.svg", "/portfolio/internal/pizzadelight2.svg", "/portfolio/internal/pizzadelight3.svg", "/portfolio/internal/pizzadelight4.svg"],
         backgroundimg: "/portfolio/pizzadelightmini.svg",
         category: "Websites",
-        link: "https://www.posterized.in/"
+        link: "https://pizzadelight.co.nz/"
     },
      {
         id: "DineFirst",
@@ -147,7 +147,7 @@ const portfolioItems: PortfolioItem[] = [
         images: ["/portfolio/dinefirst.svg", "/portfolio/internal/dinefirst2.svg", "/portfolio/internal/dinefirst3.svg", "/portfolio/internal/dinefirst4.svg"],
         backgroundimg: "/portfolio/dinefirstmini.svg",
         category: "Websites",
-        link: "https://www.posterized.in/"
+        link: "https://dinefirst.thebrainburners.io/"
     },
 ];
 

@@ -8,6 +8,7 @@ type Project = {
     description: string;
     image: string;
     textColor?: string;
+    link:string;
 };
 
 const projects: Project[] = [
