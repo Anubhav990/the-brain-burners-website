@@ -8,8 +8,8 @@ export default function Footer() {
         { name: "linkedin", url: "https://www.linkedin.com/company/thebrainburners/" },
         { name: "instagram", url: "https://www.instagram.com/_tbbmedia_?igsh=MXZubnM4b3pqcGhiMw==" },
         { name: "youtube", url: "https://www.youtube.com/@thebrainburners" },
-        { name: "x", url: "https://x.com/thebrainburners" },
-        { name: "be", url: "https://www.behance.net/thebrainburners" },
+        // { name: "x", url: "https://x.com/thebrainburners" },
+        { name: "be", url: "https://www.behance.net/robingupta13" },
     ];
 
     const router = useRouter();

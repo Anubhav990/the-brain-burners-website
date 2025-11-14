@@ -16,6 +16,39 @@ const Seo = () => {
 
     const router = useRouter();
 
+    const seoFaqs = [
+        {
+            question: "What is social media management, and why is it important for businesses?",
+            answer:
+                "Social media management involves creating, scheduling, analyzing, and engaging with content across social platforms. It helps businesses build brand awareness, attract customers, and drive traffic — essential for digital growth in today’s competitive market.",
+        },
+        {
+            question: "How does TBB’s social media management service help improve online presence?",
+            answer:
+                "TBB helps businesses strengthen their online visibility through strategic content planning, audience targeting, and performance optimization ensuring your brand stays active, relevant, and visible across all major social media channels.",
+        },
+        {
+            question: "Which social media platforms does TBB manage?",
+            answer:
+                "We manage Facebook, Instagram, LinkedIn, X (Twitter), YouTube, and Pinterest. Our team develops platform-specific strategies to maximize engagement and reach your target audience effectively.",
+        },
+        {
+            question: "Does TBB offer both organic and paid social media management?",
+            answer:
+                "Yes. TBB provides comprehensive social media management including organic content strategies and paid advertising campaigns to ensure balanced growth, brand visibility, and measurable ROI.",
+        },
+        {
+            question: "Can social media management improve my website’s SEO?",
+            answer:
+                "Indirectly, yes. Consistent and engaging social media activity drives traffic to your website, increases brand mentions, and boosts overall domain authority all of which contribute positively to SEO performance.",
+        },
+        {
+            question: "How does TBB measure social media performance?",
+            answer:
+                "We use advanced analytics tools to track reach, engagement, conversions, and audience growth. Our clients receive detailed performance reports to assess campaign effectiveness and return on investment.",
+        }
+    ];
+
     return (
         <div>
             <Header />
@@ -135,7 +168,7 @@ const Seo = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={seoFaqs} />
             <Footer />
         </div>
     );

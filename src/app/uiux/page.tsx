@@ -14,6 +14,39 @@ import { useRouter } from "next/navigation";
 
 const UiUxDesigning = () => {
 
+    const uiuxFaqs = [
+  {
+    question: "What is UI/UX design, and why is it important?",
+    answer:
+      "UI (User Interface) design focuses on the look and feel of a product, while UX (User Experience) design ensures it’s intuitive, efficient, and enjoyable to use. Together, they create digital experiences that enhance user satisfaction and drive business success.",
+  },
+  {
+    question: "What UI/UX design services does TBB offer?",
+    answer:
+      "TBB provides complete design solutions including user research, wireframing, prototyping, interaction design, usability testing, and responsive design for web and mobile applications.",
+  },
+  {
+    question: "How does good UI/UX design impact business growth?",
+    answer:
+      "A well-designed interface improves user engagement, reduces bounce rates, increases conversions, and builds customer loyalty directly contributing to higher business performance and revenue.",
+  },
+  {
+    question: "What tools and technologies does TBB use for UI/UX design?",
+    answer:
+      "Our team uses leading design tools such as Figma, Adobe XD, Sketch, InVision, and Coral Draw to create visually appealing, scalable, and user-centered digital experiences.",
+  },
+  {
+    question: "Can TBB redesign existing websites or applications?",
+    answer:
+      "Absolutely. We specialize in UI/UX redesigns that enhance usability, refresh visual appeal, and align your platform with modern design standards and business objectives.",
+  },
+  {
+    question: "How do you ensure a responsive and accessible design?",
+    answer:
+      "TBB designs interfaces that adapt seamlessly to all devices and screen sizes. We also follow accessibility guidelines (WCAG) to ensure inclusivity for users of all abilities.",
+  }
+];
+
     const router = useRouter();
 
     return (
@@ -140,7 +173,7 @@ const UiUxDesigning = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={uiuxFaqs} />
             <Footer />
         </div>
     );

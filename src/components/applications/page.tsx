@@ -9,7 +9,7 @@ interface AppItem {
     images: string[];
     backgroundimg: string;
     category: string;
-     link: string; 
+    link: string;
 }
 
 const AppItems: AppItem[] = [
@@ -20,18 +20,18 @@ const AppItems: AppItem[] = [
             "Track your fitness journey with powerful real-time analytics tailored just for you. This app counts every calorie with ease and stays on top of your nutrition.",
         images: ["/portfolio/fitwiser.svg", "/portfolio/internal/fitwiser2.svg", "/portfolio/internal/fitwiser3.svg", "/portfolio/internal/fitwiser4.svg"],
         backgroundimg: "/portfolio/fitwisermini.svg",
-        category: "Websites",
+        category: "Applications",
         link: "https://fitwiser.thebrainburners.io/"
     },
     {
-        id: "jobjero",
-        title: "JobJero",
+        id: "eduLinks",
+        title: "EduLinks",
         description:
-            "JobJero isn't just another job board. It's a smarter, faster, and intuitive way to hire and get hired. We're using AI to match the right talent with the right roles.",
-        images: ["/portfolio/jobjaro.svg", "/portfolio/internal/jobjaro2.svg", "/portfolio/internal/jobjaro3.svg", "/portfolio/internal/jobjaro4.svg"],
-        backgroundimg: "/portfolio/jobjeromini.svg",
-        category: "Websites",
-        link: "https://jobjaro.thebrainburners.io/"
+            "Edulinks AI helps you discover your ideal career, shortlist universities & courses, and calculate visa success.",
+        images: ["/portfolio/edulinksapp.svg", "/portfolio/internal/edulinksapp2.svg", "/portfolio/internal/edulinksapp3.svg", "/portfolio/internal/edulinksapp4.svg"],
+        backgroundimg: "/portfolio/edulinksmini.svg",
+        category: "Applications",
+        link: "https://edulinks.io/"
     },
     {
         id: "rideshare",
@@ -40,19 +40,19 @@ const AppItems: AppItem[] = [
             "Rideshare is a user-friendly ride-hailing app crafted to make city travel effortless.",
         images: ["/portfolio/rideshare.svg", "/portfolio/internal/rideshare2.svg", "/portfolio/internal/rideshare3.svg", "/portfolio/internal/rideshare4.svg"],
         backgroundimg: "/portfolio/ridesharemini.svg",
-        category: "Websites",
+        category: "Applications",
         link: "https://rideshare.thebrainburners.io/"
     },
-    {
-        id: "propertypro",
-        title: "PropertyPro AI",
-        description:
-            "PropertyPro AI was developed to solve challenges in real estate: time & inconsistent client communication.",
-        images: ["/portfolio/propertypro.svg", "/portfolio/internal/property2.svg", "/portfolio/internal/property3.svg", "/portfolio/internal/property4.svg"],
-        backgroundimg: "/portfolio/propertypromini.svg",
-        category: "Websites",
-        link: "https://propertyproai.thebrainburners.io/"
-    }
+    // {
+    //     id: "propertypro",
+    //     title: "PropertyPro AI",
+    //     description:
+    //         "PropertyPro AI was developed to solve challenges in real estate: time & inconsistent client communication.",
+    //     images: ["/portfolio/propertypro.svg", "/portfolio/internal/property2.svg", "/portfolio/internal/property3.svg", "/portfolio/internal/property4.svg"],
+    //     backgroundimg: "/portfolio/propertypromini.svg",
+    //     category: "Applications",
+    //     link: "https://propertyproai.thebrainburners.io/"
+    // }
 ];
 
 const PortfolioCard = ({ item }: { item: AppItem }) => {
@@ -70,12 +70,12 @@ const PortfolioCard = ({ item }: { item: AppItem }) => {
         );
 
     return (
-        <div className="max-w-[1300px] mx-auto mb-12">
+        <div className="max-w-[1300px] w-full px-4 mx-auto mb-12">
             <div className="rounded-4xl overflow-hidden group transition-all duration-300">
                 <div className="flex flex-col md:flex-row min-h-[400px]">
                     {/* Left Image Section */}
                     <div
-                        className="relative w-full md:w-[45%] overflow-hidden z-20 h-[400px] bg-[#2D2D2D] rounded-3xl"
+                        className="relative w-full md:w-[45%] overflow-hidden z-20 h-[250px] sm:h-[400px] bg-[#2D2D2D] rounded-3xl"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
@@ -85,7 +85,7 @@ const PortfolioCard = ({ item }: { item: AppItem }) => {
                             className="w-full h-full object-cover rounded-3xl"
                         />
 
-                        {isHovered && item.images.length > 1 && (
+                        {/* {isHovered && item.images.length > 1 && (
                             <>
                                 <button
                                     onClick={handlePrevious}
@@ -124,6 +124,57 @@ const PortfolioCard = ({ item }: { item: AppItem }) => {
                                     </svg>
                                 </button>
                             </>
+                        )} */}
+                        {item.images.length > 1 && (
+                            <>
+                                <button
+                                    onClick={handlePrevious}
+                                    className="
+        absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8
+        bg-[#F38400] rounded-full flex items-center justify-center shadow-lg z-30
+        hover:bg-[#d67400] transition-colors
+        opacity-100 md:opacity-0 md:group-hover:opacity-100
+      "
+                                >
+                                    <svg
+                                        className="w-6 h-6 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M15 19l-7-7 7-7"
+                                        />
+                                    </svg>
+                                </button>
+
+                                <button
+                                    onClick={handleNext}
+                                    className="
+        absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8
+        bg-[#F38400] rounded-full flex items-center justify-center shadow-lg z-30
+        hover:bg-[#d67400] transition-colors
+        opacity-100 md:opacity-0 md:group-hover:opacity-100
+      "
+                                >
+                                    <svg
+                                        className="w-6 h-6 text-white"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth={2}
+                                            d="M9 5l7 7-7 7"
+                                        />
+                                    </svg>
+                                </button>
+                            </>
                         )}
                     </div>
 
@@ -133,11 +184,11 @@ const PortfolioCard = ({ item }: { item: AppItem }) => {
                             <img
                                 src={item.backgroundimg}
                                 alt=""
-                                className="w-20 h-20 object-contain"
+                                className="w-10 h-10 sm:w-20 sm:h-20 object-contain"
                             />
                         </div>
 
-                        <a href={item.link} target="_blank" className="text-3xl md:text-4xl font-bold text-black mb-4 underline decoration-2 decoration-gray-400 underline-offset-8">
+                        <a href={item.link} target="_blank" className="text-3xl md:text-4xl font-bold text-black mb-4 underline decoration-2 decoration-gray-400 underline-offset-8 hover:decoration-[#F38400]">
                             {item.title}
                         </a>
                         <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-[500px]">
@@ -162,3 +213,5 @@ const Applications = () => {
 };
 
 export default Applications;
+
+

@@ -24,6 +24,57 @@ import { useRouter } from 'next/navigation';
 import ClientVideoSection from '../clientvideo/page';
 
 
+const faqs = [
+    {
+        question: "What services does The Brain Burners (TBB) provide?",
+        answer:
+            "TBB is a full-stack IT company specializing in custom UI/UX design, app and website development, Performance Marketing, SEO, Branding, Social Media Management and Artificial Intelligence Modernization. We create tailored digital solutions that combine technology, creativity, and strategy ensuring every brand we work with stands out online.",
+    },
+    {
+        question: "What makes TBB different from other IT companies?",
+        answer:
+            "Unlike agencies that recycle templates, TBB designs every UI/UX from scratch, giving your brand a unique visual identity. We focus on functionality, speed, and design psychology — not just looks — ensuring your website or app actually converts visitors into customers.",
+    },
+    {
+        question: "How does TBB work with clients?",
+        answer:
+            "We start with a discovery call to understand your goals, audience, and brand tone. Then, we share a custom project roadmap with design mockups, timelines, and development phases. You’re kept in the loop through every milestone from concept to deployment..",
+    },
+    {
+        question: "Can TBB handle everything from design to marketing?",
+        answer:
+            "Yes. TBB offers a complete digital ecosystem — UI/UX, web & app development, branding, SEO, and social media management. You don’t need multiple vendors; we build and grow your brand under one roof.",
+    },
+    {
+        question: "How long does it take to develop a website or app?",
+        answer: `It depends on project size:
+Landing Page: 5–7 days
+
+Corporate Website: 2–4 weeks
+
+Custom Web/App Project: 6–10 weeks
+We deliver sample designs early so you can visualize direction before full development.`,
+    },
+    {
+        question: "What do I receive at the end of the project?",
+        answer:
+            `You’ll get:
+
+Complete source files (Figma, XD, codebase)
+
+Deployment on your server or app store
+
+Brand assets (icons, fonts, color codes)
+
+Documentation & optional post-launch support`
+    },
+    {
+        question: "Do you provide hosting and domain services too?",
+        answer:
+            "We can assist with domain registration, server setup, SSL integration, and website hosting — or work with your existing infrastructure if you already have one.",
+    },
+];
+
 const HomeTbb = () => {
 
     const router = useRouter();
@@ -77,8 +128,8 @@ const HomeTbb = () => {
 
                         <button
                             onClick={() => router.push('/contact')}
-                            className='bg-[#F38400] hidden md:block py-[10px] px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
-                            <p className='text-[26px]'>Let's discuss your project</p>
+                            className='bg-[#F38400] py-[5px] sm:py-[10px] px-[20px] sm:px-[30px] text-white font-bold capitalize rounded-4xl mt-6 shadow-[2px_5px_0_#000000]'>
+                            <p className='text-[18px] sm:text-[26px]'>Let's discuss your project</p>
                         </button>
                     </div>
                     <div className='md:w-[30%] md:mt-0 mt-6 w-full'>
@@ -128,7 +179,7 @@ const HomeTbb = () => {
             <CrewTBB />
             <CEO />
             <FounderHeroMobile />
-            <FAQS />
+            <FAQS faqs={faqs} />
             <Footer />
         </>
     )

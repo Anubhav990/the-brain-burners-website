@@ -17,6 +17,39 @@ const PerformanceMarketing = () => {
 
     const router = useRouter();
 
+    const performanceFaqs = [
+        {
+            question: "What is performance marketing?",
+            answer:
+                "Performance marketing is a results-driven approach to digital advertising where you pay only for measurable actions such as clicks, leads, or conversions. It ensures every marketing dollar delivers tangible results.",
+        },
+        {
+            question: "What performance marketing services does TBB offer?",
+            answer:
+                "TBB offers a full suite of performance marketing solutions, including Google Ads, Meta Ads, LinkedIn Ads, display marketing, remarketing campaigns, and conversion rate optimization.",
+        },
+        {
+            question: "How is performance marketing different from traditional marketing?",
+            answer:
+                "Unlike traditional marketing, performance marketing focuses on data, analytics, and measurable outcomes. You pay only for specific results like leads, sales, or engagement not for exposure alone.",
+        },
+        {
+            question: "Can TBB help optimize existing ad campaigns?",
+            answer:
+                "Yes. We audit your existing campaigns, identify performance gaps, and optimize targeting, ad creatives, and bidding strategies to improve ROI and reduce wasted ad spend.",
+        },
+        {
+            question: "Does TBB offer lead generation through performance marketing?",
+            answer:
+                "Absolutely. We design targeted ad campaigns that attract high-quality leads using data segmentation, behavioral targeting, and conversion-optimized landing pages.",
+        },
+        {
+            question: "How long does it take to see results from performance marketing?",
+            answer:
+                "Most clients begin seeing measurable results within a few weeks of campaign launch, depending on ad spend, audience size, and campaign optimization levels.",
+        }
+    ];
+
     return (
         <div>
             <Header />
@@ -135,7 +168,7 @@ const PerformanceMarketing = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={performanceFaqs} />
             <Footer />
         </div>
     );

@@ -16,6 +16,39 @@ const SocialMedia = () => {
 
     const router = useRouter();
 
+    const brandingFaqs = [
+        {
+            question: "What does branding mean for a business?",
+            answer:
+                "Branding is the process of creating a unique identity for your business through design, messaging, and strategy. It defines how your customers perceive your company and helps build trust, recognition, and loyalty.",
+        },
+        {
+            question: "What branding services does TBB offer?",
+            answer:
+                "TBB provides end-to-end branding solutions including brand strategy, logo design, brand identity creation, visual guidelines, tone of voice development, and digital brand implementation across all platforms.",
+        },
+        {
+            question: "Why is branding important for business growth?",
+            answer:
+                "A strong brand helps your business stand out, attract the right audience, and create lasting emotional connections. It also increases customer trust and drives consistent growth in competitive markets.",
+        },
+        {
+            question: "How does TBB create a brand identity?",
+            answer:
+                "We start by understanding your vision, target audience, and business goals. Then, our creative and strategy teams collaborate to design a unique visual identity and messaging framework that align with your company’s values.",
+        },
+        {
+            question: "Can TBB help rebrand an existing business?",
+            answer:
+                "Yes. We specialize in brand modernization refreshing existing brands with updated designs, messaging, and positioning while retaining core brand values and recognition.",
+        },
+        {
+            question: "What is the difference between branding and marketing?",
+            answer:
+                "Branding defines who you are as a business your identity, values, and promise. Marketing uses that identity to communicate and promote your brand to your target audience through campaigns and channels.",
+        }
+    ];
+
     return (
         <div>
             <Header />
@@ -135,7 +168,7 @@ const SocialMedia = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={brandingFaqs} />
             <Footer />
         </div>
     );

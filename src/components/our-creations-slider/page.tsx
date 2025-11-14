@@ -15,123 +15,123 @@ type Project = {
 };
 
 const projects: Project[] = [
-  {
-    id: 1,
-    title: "Fitwiser",
-    description:
-      "Track your fitness journey with powerful real-time analytics tailored just for you. This app counts every calorie with ease and stay on top of your nutrition goals.",
-    image: "/sliders/fitwiser.png",
-    textColor: "text-black",
-    link: "https://fitwiser.thebrainburners.io/"
-  },
-  {
-    id: 2,
-    title: "JobJaro",
-    description:
-      "JobJaro isn't just another job board. It's a smarter, faster, and intuitive way to hire and get hired. We're using AI to match the right talent with the right roles.",
-    image: "/sliders/jobjaro.png",
-    textColor: "text-black",
-    link: "https://jobjaro.thebrainburners.io/"
-  },
-  {
-    id: 3,
-    title: "Rideshare",
-    description:
-      "Rideshare is a user-friendly ride-hailing app crafted to make city travel effortless. Whether you're commuting daily or booking a ride on the go.",
-    image: "/sliders/rideshare.png",
-    textColor: "text-black",
-    link: "https://edulinkcasestudy.tbbsample.com/"
-  },
-  {
-    id: 4,
-    title: "propertyPro AI",
-    description:
-      "PropertyPro AI was developed to solve some of the most pressing challenges in the real estate industry slow response times & inconsistent client communication.",
-    image: "/sliders/propertypro.png",
-    textColor: "text-black",
-    link: "https://propertyproai.thebrainburners.io/"
-  },
-  {
-    id: 5,
-    title: "Prime Depth Labs",
-    description:
-      "We combine cutting-edge AI with software development to create intelligent, scalable, and future-ready solutions for businesses worldwide.",
-    image: "/sliders/primedepth.png",
-    textColor: "text-black",
-    link: "https://www.primedepthlabs.com/"
-  },
-  {
-    id: 6,
-    title: "The Mud",
-    description:
-      "The Mud is a contemporary restaurant blending global flavors with local freshness to craft unforgettable dining experiences.",
-    image: "/sliders/themud.png",
-    textColor: "text-black",
-    link: "https://themud.thebrainburners.io/"
-  },
-  {
-    id: 7,
-    title: "Infutrix",
-    description:
-      "Infutrix partners with innovative companies, from startups to Fortune 500, lending software engineering and Al expertise to propel them to new heights.",
-    image: "/sliders/infutrix.png",
-    textColor: "text-black",
-    link: "https://infutrix.thebrainburners.io/"
-  },
-  {
-    id: 8,
-    title: "EduLinks",
-    description:
-      "Edulinks AI helps you discover your ideal career, shortlist universities & courses, and calculate visa success all in one smart, personalized journey.",
-    image: "/sliders/edulinks.png",
-    textColor: "text-black",
-    link: "https://edulinkcasestudy.tbbsample.com/"
-  },
-  {
-    id: 9,
-    title: "Zaucto",
-    description:
-      "At Zaucta, procurement should be effortless, transparent & cost-efficient. It is designed to transform the way businesses source chemicals & additives.",
-    image: "/sliders/zaucto.png",
-    textColor: "text-black",
-    link: "https://zaucto.thebrainburners.io/"
-  },
-  {
-    id: 10,
-    title: "Hoopsie",
-    description:
-      "Hoopsie is not just another daily wear anti-tarnish jewelry brand, it's the healthy relationship that you've always wanted. We believe in trust & transparency.",
-    image: "/sliders/hoopsie.png",
-    textColor: "text-black",
-    link: "https://hoopsie.thebrainburners.io/"
-  },
-  {
-    id: 11,
-    title: "Roopvedaa",
-    description:
-      "At RoopVedaa, we believe every beauty journey is unique. That's why we give you the option to customize your own hamper.",
-    image: "/sliders/roopveda.png",
-    textColor: "text-black",
-    link: "https://roopvedaa.thebrainburners.io/"
-  },
-  {
-    id: 12,
-    title: "IBSC",
-    description:
-      "IBSC's provides banking and finance courses are open to graduates, job seekers & working professionals looking to build a career in the Banking,",
-    image: "/sliders/ibsc.png",
-    textColor: "text-black",
-    link: "https://ibsc.thebrainburners.io/"
-  },
-  {
-    id: 13,
-    title: "Posterized",
-    description:
-      "Transform your memories into stunning wall art with Posterized. Custom posters designed to capture your unique moments.",
-    image: "/sliders/posterized.png",
-    textColor: "text-black",
-    link: "https://posterized.thebrainburners.io/"
-  },
+    {
+        id: 1,
+        title: "Fitwiser",
+        description:
+            "Track your fitness journey with powerful real-time analytics tailored just for you. This app counts every calorie with ease and stay on top of your nutrition goals.",
+        image: "/sliders/fitwiser.png",
+        textColor: "text-black",
+        link: "https://fitwiser.thebrainburners.io/"
+    },
+    {
+        id: 2,
+        title: "JobJaro",
+        description:
+            "JobJaro isn't just another job board. It's a smarter, faster, and intuitive way to hire and get hired. We're using AI to match the right talent with the right roles.",
+        image: "/sliders/jobjaro.png",
+        textColor: "text-black",
+        link: "https://jobjaro.thebrainburners.io/"
+    },
+    {
+        id: 3,
+        title: "Rideshare",
+        description:
+            "Rideshare is a user-friendly ride-hailing app crafted to make city travel effortless. Whether you're commuting daily or booking a ride on the go.",
+        image: "/sliders/rideshare.png",
+        textColor: "text-black",
+        link: "https://edulinkcasestudy.tbbsample.com/"
+    },
+    {
+        id: 4,
+        title: "propertyPro AI",
+        description:
+            "PropertyPro AI was developed to solve some of the most pressing challenges in the real estate industry slow response times & inconsistent client communication.",
+        image: "/sliders/propertypro.png",
+        textColor: "text-black",
+        link: "https://propertyproai.thebrainburners.io/"
+    },
+    {
+        id: 5,
+        title: "Prime Depth Labs",
+        description:
+            "We combine cutting-edge AI with software development to create intelligent, scalable, and future-ready solutions for businesses worldwide.",
+        image: "/sliders/primedepth.png",
+        textColor: "text-black",
+        link: "https://www.primedepthlabs.com/"
+    },
+    {
+        id: 6,
+        title: "The Mud",
+        description:
+            "The Mud is a contemporary restaurant blending global flavors with local freshness to craft unforgettable dining experiences.",
+        image: "/sliders/themud.png",
+        textColor: "text-black",
+        link: "https://www.themudbar.co.nz/"
+    },
+    {
+        id: 7,
+        title: "Infutrix",
+        description:
+            "Infutrix partners with innovative companies, from startups to Fortune 500, lending software engineering and Al expertise to propel them to new heights.",
+        image: "/sliders/infutrix.png",
+        textColor: "text-black",
+        link: "https://infutrix.com/"
+    },
+    {
+        id: 8,
+        title: "EduLinks",
+        description:
+            "Edulinks AI helps you discover your ideal career, shortlist universities & courses, and calculate visa success all in one smart, personalized journey.",
+        image: "/sliders/edulinks.png",
+        textColor: "text-black",
+        link: "https://edulinks.io/"
+    },
+    {
+        id: 9,
+        title: "Zaucto",
+        description:
+            "At Zaucta, procurement should be effortless, transparent & cost-efficient. It is designed to transform the way businesses source chemicals & additives.",
+        image: "/sliders/zaucto.png",
+        textColor: "text-black",
+        link: "https://zaucto.com/"
+    },
+    {
+        id: 10,
+        title: "Hoopsie",
+        description:
+            "Hoopsie is not just another daily wear anti-tarnish jewelry brand, it's the healthy relationship that you've always wanted. We believe in trust & transparency.",
+        image: "/sliders/hoopsie.png",
+        textColor: "text-black",
+        link: "https://hoopsie.in/"
+    },
+    // {
+    //     id: 11,
+    //     title: "Roopvedaa",
+    //     description:
+    //         "At RoopVedaa, we believe every beauty journey is unique. That's why we give you the option to customize your own hamper.",
+    //     image: "/sliders/roopveda.png",
+    //     textColor: "text-black",
+    //     link: "https://roopvedaa.thebrainburners.io/"
+    // },
+    // {
+    //     id: 11,
+    //     title: "IBSC",
+    //     description:
+    //         "IBSC's provides banking and finance courses are open to graduates, job seekers & working professionals looking to build a career in the Banking,",
+    //     image: "/sliders/ibsc.png",
+    //     textColor: "text-black",
+    //     link: "https://ibsc.thebrainburners.io/"
+    // },
+    {
+        id: 11,
+        title: "Posterized",
+        description:
+            "Transform your memories into stunning wall art with Posterized. Custom posters designed to capture your unique moments.",
+        image: "/sliders/posterized.png",
+        textColor: "text-black",
+        link: "https://www.posterized.in/"
+    },
 ];
 
 export default function CreationSlider() {

@@ -24,7 +24,7 @@ const GraphicDesign = () => {
                 <div className='max-w-[1250px] mx-auto'>
                     <Image priority src="/portfolio/graphicdesign/four.svg" alt="cakeboutique" width={600} height={400} className='w-full mt-20' />
                 </div>
-                <Image src="/portfolio/graphicdesign/five.svg" alt="five" width={600} height={400} className='w-full mt-34' />
+                <Image priority src="/portfolio/graphicdesign/five.svg" alt="five" width={600} height={400} className='w-full mt-34' />
                 <div className='max-w-[1250px] mx-auto'>
                     {/* <Image priority src="/portfolio/graphicdesign/six.svg" alt="six" width={600} height={400} className='w-full mt-20' /> */}
                     <div className="min-h-screen bg-orange-50 rounded-[40px] overflow-hidden">

@@ -17,6 +17,40 @@ const WebDevelopment = () => {
 
     const router = useRouter();
 
+    const webFaqs = [
+        {
+            question: "What web development services does TBB provide?",
+            answer:
+                "TBB offers complete web development solutions including custom website design, front-end and back-end development, eCommerce websites, CMS integration, API development, and website maintenance.",
+        },
+        {
+            question: "How does TBB ensure a high-performing website?",
+            answer:
+                "We build websites using modern frameworks, responsive design, and optimized coding practices. Every project undergoes speed testing, SEO audits, and performance enhancements to ensure a fast, secure, and seamless experience.",
+        },
+        {
+            question: "Does TBB offer custom web design and development?",
+            answer:
+                "Yes. We develop fully customized websites tailored to your brand, goals, and user needs ensuring your digital presence stands out and aligns with your business objectives.",
+        },
+        {
+            question: "How long does it take to develop a website?",
+            answer:
+                "Timelines depend on project complexity. A standard business website may take 3–6 weeks, while large-scale or eCommerce platforms can take 8–12 weeks or more, including testing and revisions.",
+        },
+        {
+            question: "Is SEO included in TBB’s web development services?",
+            answer:
+                "Yes. We follow SEO best practices during development including optimized site structure, metadata, mobile responsiveness, and fast load times to ensure your website ranks better on search engines.",
+        },
+        {
+            question: "Can TBB develop eCommerce websites?",
+            answer:
+                "Absolutely. We build secure and scalable eCommerce solutions using platforms like Shopify, WooCommerce, and Magento, or fully custom-built systems with advanced product and payment features.",
+        }
+    ];
+
+
     return (
         <div>
             <Header />
@@ -134,7 +168,7 @@ const WebDevelopment = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={webFaqs} />
             <Footer />
         </div>
     );

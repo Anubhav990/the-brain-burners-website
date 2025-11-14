@@ -10,7 +10,7 @@ const RotatingCardsSecond = () => {
     { text: "Let's Discuss Your Project", width: "w-75", rotation: "-rotate-0", zIndex: "z-40", link: "/contact" },
     { text: "Get Quote", width: "w-75", rotation: "-rotate-15", zIndex: "z-30", link: "/contact" },
     { text: "Book A Call", width: "w-75", rotation: "-rotate-30", zIndex: "z-20", link: "/contact" },
-    { text: "WhatsApp", width: "w-75", rotation: "-rotate-45", zIndex: "z-10", link: "/contact" }
+    // { text: "WhatsApp", width: "w-75", rotation: "-rotate-45", zIndex: "z-10", link: "/contact" }
   ];
 
   return (

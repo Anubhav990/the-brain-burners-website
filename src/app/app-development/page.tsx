@@ -17,6 +17,39 @@ const AppDevelopment = () => {
 
     const router = useRouter();
 
+    const appFaqs = [
+        {
+            question: "What types of application development services does TBB offer?",
+            answer:
+                "TBB provides end-to-end application development services, including web apps, mobile apps (iOS & Android), enterprise solutions, custom software, and cloud-based applications tailored to your business needs.",
+        },
+        {
+            question: "How does TBB ensure the quality and performance of applications?",
+            answer:
+                "We follow agile development practices, rigorous testing, and continuous performance monitoring to ensure your application is fast, secure, and scalable across all devices and platforms.",
+        },
+        {
+            question: "What technologies does TBB use for app development?",
+            answer:
+                "Our development team works with modern technologies like React, Angular, Flutter, Node.js, Python, Java, .NET, and cloud platforms such as AWS, Azure, and Google Cloud to build robust applications.",
+        },
+        {
+            question: "Can TBB develop both Android and iOS applications?",
+            answer:
+                "Yes. We develop native, hybrid, and cross-platform apps for Android and iOS using frameworks like Flutter, React Native, and Kotlin to ensure smooth functionality and consistent user experience.",
+        },
+        {
+            question: "Does TBB offer app maintenance and support after launch?",
+            answer:
+                "Absolutely. We provide ongoing maintenance, updates, bug fixes, and performance optimization to ensure your application remains up-to-date and reliable post-launch.",
+        },
+        {
+            question: "How can I start my application development project with TBB?",
+            answer:
+                "You can get started by contacting our team for a consultation. We’ll discuss your goals, outline a detailed project roadmap, and design a solution that aligns perfectly with your business vision.",
+        }
+    ];
+
     return (
         <div>
             <Header />
@@ -135,7 +168,7 @@ const AppDevelopment = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={appFaqs} />
             <Footer />
         </div>
     );

@@ -1,7 +1,11 @@
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 const CEO = () => {
+
+    const router = useRouter();
+
     return (
         // <div className=' bg-[url(/ceocompbanner.png)] max-w-[1300px] mx-auto bg-contain bg-center bg-no-repeat relative z-20 py-10 hidden sm:block'>
         //     <div className='flex max-w-[1300px] mx-auto'>
@@ -89,7 +93,9 @@ const CEO = () => {
             </div>
           </div>
           <div className="mt-4">
-            <button className="bg-[#F38400] text-white px-8 py-3 rounded-full text-[20px] font-medium hover:scale-105 transition shadow-[2px_5px_0_#000000]">
+            <button
+            onClick={() => router.push('/contact')}
+            className="bg-[#F38400] text-white px-8 py-3 rounded-full text-[20px] font-medium hover:scale-105 transition shadow-[2px_5px_0_#000000]">
               Let&apos;s Discuss Your Project
             </button>
           </div>

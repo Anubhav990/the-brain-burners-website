@@ -17,6 +17,39 @@ const SocialMedia = () => {
 
     const router = useRouter();
 
+    const aiFaqs = [
+        {
+            question: "What is AI modernization, and why is it important for businesses?",
+            answer:
+                "Social media management involves creating, scheduling, analyzing, and engaging with content across social platforms. It helps businesses build brand awareness, attract customers, and drive traffic — essential for digital growth in today’s competitive market.",
+        },
+        {
+            question: "How does TBB help organizations with AI modernization?",
+            answer:
+                "TBB assesses your existing infrastructure, identifies AI integration opportunities, and implements scalable, cloud-ready solutions. Our goal is to enhance efficiency, reduce costs, and enable smarter business operations using modern AI frameworks.",
+        },
+        {
+            question: "Which industries can benefit from AI modernization?",
+            answer:
+                "AI modernization benefits industries such as healthcare, finance, retail, logistics, manufacturing, and education by automating processes, improving data analytics, and enhancing customer experiences.",
+        },
+        {
+            question: "What are the key components of an AI modernization strategy?",
+            answer:
+                "A robust AI modernization strategy includes data migration, model retraining, cloud adoption, workflow automation, and integration with modern APIs all aligned with your organization’s digital goals.",
+        },
+        {
+            question: "Can AI modernization work with existing legacy systems?",
+            answer:
+                "Yes. TBB specializes in hybrid solutions that integrate AI technologies with your current systems, minimizing downtime and maximizing performance while ensuring a smooth digital transition.",
+        },
+        {
+            question: "How secure is AI modernization?",
+            answer:
+                "Security is a core focus of every AI modernization project at TBB. We implement advanced data encryption, compliance checks, and continuous monitoring to protect your infrastructure and sensitive information.",
+        }
+    ];
+
     return (
         <div>
             <Header />
@@ -136,7 +169,7 @@ const SocialMedia = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={aiFaqs} />
             <Footer />
         </div>
     );

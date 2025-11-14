@@ -16,6 +16,39 @@ const SocialMedia = () => {
 
     const router = useRouter();
 
+    const socialmediaFaqs = [
+        {
+            question: "What does TBB’s social media management service include?",
+            answer:
+                "Our service covers strategy development, content creation, scheduling, community engagement, analytics tracking, and campaign optimization across major social media platforms.",
+        },
+        {
+            question: "How can social media management benefit my business?",
+            answer:
+                "Effective social media management helps enhance your brand visibility, engage your target audience, drive website traffic, and generate qualified leads  all while maintaining a consistent brand identity.",
+        },
+        {
+            question: "Which platforms do you manage?",
+            answer:
+                "We manage all leading platforms including Facebook, Instagram, LinkedIn, X (Twitter), YouTube, and Pinterest. We tailor our strategy to the platforms most relevant to your business goals.",
+        },
+        {
+            question: "Do you create custom content for each platform?",
+            answer:
+                "Yes. Our creative team designs platform specific content from visuals and captions to short-form videos  ensuring your message resonates with your audience on each channel.",
+        },
+        {
+            question: "How do you measure the success of social media campaigns?",
+            answer:
+                "We use data-driven insights and advanced analytics tools to monitor engagement, reach, conversions, and overall ROI. Regular performance reports are shared with you for full transparency.",
+        },
+        {
+            question: "How do you measure the success of social media campaigns?",
+            answer:
+                "We use data-driven insights and advanced analytics tools to monitor engagement, reach, conversions, and overall ROI. Regular performance reports are shared with you for full transparency.",
+        }
+    ];
+
     return (
         <div>
             <Header />
@@ -135,7 +168,7 @@ const SocialMedia = () => {
             </div>
 
             {/* FAQs */}
-            <FAQS />
+            <FAQS faqs={socialmediaFaqs} />
             <Footer />
         </div>
     );
